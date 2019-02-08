@@ -10,4 +10,5 @@ import Foundation
 
 class APIKey {
     static let key = "YOUR API KEY GOES HERE"
+    static let secretKey = ""
 }
