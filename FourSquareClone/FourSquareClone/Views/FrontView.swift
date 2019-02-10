@@ -134,7 +134,7 @@ class FrontView: UIView {
     func setButtons() {
         addSubview(bfButton)
         bfButton.translatesAutoresizingMaskIntoConstraints = false
-        bfButton.topAnchor.constraint(equalTo: mainSearchBar.bottomAnchor, constant: 20).isActive = true
+        bfButton.topAnchor.constraint(equalTo: mainSearchBar.bottomAnchor, constant: 50).isActive = true
         bfButton.leadingAnchor.constraint(equalTo: bgImage.leadingAnchor, constant: 20).isActive = true
         bfButton.heightAnchor.constraint(equalToConstant: 120).isActive = true
         bfButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
@@ -142,7 +142,7 @@ class FrontView: UIView {
         //lunch button
         addSubview(lunchButton)
         lunchButton.translatesAutoresizingMaskIntoConstraints = false
-        lunchButton.topAnchor.constraint(equalTo: mainSearchBar.bottomAnchor, constant: 20).isActive = true
+        lunchButton.topAnchor.constraint(equalTo: mainSearchBar.bottomAnchor, constant: 50).isActive = true
         lunchButton.leadingAnchor.constraint(equalTo: bfButton.trailingAnchor, constant: 7).isActive = true
        lunchButton.heightAnchor.constraint(equalToConstant: 120).isActive = true
         lunchButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
@@ -150,7 +150,7 @@ class FrontView: UIView {
         //diner button
         addSubview(dinerButton)
         dinerButton.translatesAutoresizingMaskIntoConstraints = false
-        dinerButton.topAnchor.constraint(equalTo: mainSearchBar.bottomAnchor, constant: 20).isActive = true
+        dinerButton.topAnchor.constraint(equalTo: mainSearchBar.bottomAnchor, constant: 50).isActive = true
         dinerButton.trailingAnchor.constraint(equalTo: bgImage.trailingAnchor, constant: -20).isActive = true
         dinerButton.heightAnchor.constraint(equalToConstant: 120).isActive = true
         dinerButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
