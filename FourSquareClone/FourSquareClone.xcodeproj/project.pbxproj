@@ -91,7 +91,6 @@
 				93D132D8220DF6D7003A7516 /* Controllers */,
 				93D132D7220DF6C9003A7516 /* Views */,
 				93D132D9220DF6DC003A7516 /* Models */,
-				93D132D4220DF5CC003A7516 /* APIKeys.swift */,
 				93D132DA220DF706003A7516 /* File Manager Services */,
 				93D132E4220DF7F0003A7516 /* Date Helper */,
 				93D132DB220DF7AB003A7516 /* Network Services */,
@@ -140,6 +139,7 @@
 		93D132D9220DF6DC003A7516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				93D132D4220DF5CC003A7516 /* APIKeys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
