@@ -15,9 +15,7 @@ class ListViewController: UIViewController {
     let createView = CreateView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.addSubview(listView)
-        view.addSubview(savedView)
-        //view.addSubview(createView)
+        view.addSubview(listView)
         createView.dismissButton.addTarget(self, action: #selector(dismissFunc), for: .touchUpInside)
     }
     @objc private func dismissFunc() {
