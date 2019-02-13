@@ -10,12 +10,36 @@ import UIKit
 
 class SavedView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    lazy var savedTableView: UITableView = {
+        let savedTV = UITableView()
+        savedTV.backgroundColor = .red
+        return savedTV
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: UIScreen.main.bounds)
+        commonInit()
     }
-    */
-
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+        fatalError("init(coder:) failed to implement")
+    }
+    private func commonInit(){
+        backgroundColor = .white
+        setupTableView()
+    }
+}
+extension SavedView {
+    private func setupTableView() {
+        addSubview(savedTableView)
+        savedTableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            savedTableView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            savedTableView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            savedTableView.heightAnchor.constraint(equalTo: self.heightAnchor),
+            savedTableView.widthAnchor.constraint(equalTo: self.widthAnchor)
+            ])
+    }
+    
 }
