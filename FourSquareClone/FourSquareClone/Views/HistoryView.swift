@@ -28,6 +28,7 @@ class HistoryView: UIView {
         addSubview(historyTableView)
         setConstraints()
     }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()

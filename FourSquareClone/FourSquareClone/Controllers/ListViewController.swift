@@ -12,21 +12,17 @@ class ListViewController: UIViewController {
 
     let listView = ListView()
     let savedView = SavedView()
+    let createView = CreateView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(listView)
+        //view.addSubview(listView)
         view.addSubview(savedView)
+        //view.addSubview(createView)
+        createView.dismissButton.addTarget(self, action: #selector(dismissFunc), for: .touchUpInside)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc private func dismissFunc() {
+        print("does this work")
+        dismiss(animated: true, completion: nil)
     }
-    */
 
 }
