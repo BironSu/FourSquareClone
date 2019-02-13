@@ -11,35 +11,22 @@ import UIKit
 class HistoryViewController: UIViewController {
 
     let historyView = HistoryView()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
-        self.view.addSubview(historyView)
-        historyView.delegate = self
-        historyView.historyTableView.dataSource = self
-        self.title = "History"
-    }
-    
-}
+        view.addSubview(historyView)
 
-extension HistoryViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        // Do any additional setup after loading the view.
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") else {return UITableViewCell()}
-        return cell
-    }
-    
-    
-}
 
-extension HistoryViewController: HistoryViewDelegate {
-    func seguePressed() {
-        print("idk")
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
     }
-    
-    
+    */
+
 }
