@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		934539C4221375420067C061 /* VenueCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934539C3221375420067C061 /* VenueCollection.swift */; };
 		93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132C2220DF33B003A7516 /* AppDelegate.swift */; };
 		93D132CA220DF33C003A7516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D132C9220DF33C003A7516 /* Assets.xcassets */; };
 		93D132CD220DF33C003A7516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D132CB220DF33C003A7516 /* LaunchScreen.storyboard */; };
@@ -31,9 +32,11 @@
 		93D13303220E2549003A7516 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D13302220E2549003A7516 /* MapView.swift */; };
 		93D133272211E174003A7516 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D133262211E174003A7516 /* SavedViewController.swift */; };
 		93D133292211E180003A7516 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D133282211E180003A7516 /* CreateViewController.swift */; };
+		93D1332B2211E6CA003A7516 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D1332A2211E6CA003A7516 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		934539C3221375420067C061 /* VenueCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCollection.swift; sourceTree = "<group>"; };
 		93D132BF220DF33B003A7516 /* FourSquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D132C2220DF33B003A7516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D132C9220DF33C003A7516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +63,7 @@
 		93D13302220E2549003A7516 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		93D133262211E174003A7516 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		93D133282211E180003A7516 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		93D1332A2211E6CA003A7516 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 				93D132F6220E20D5003A7516 /* FrontViewController.swift */,
 				93D132EC220E1F74003A7516 /* ListViewController.swift */,
 				93D133262211E174003A7516 /* SavedViewController.swift */,
+				93D1332A2211E6CA003A7516 /* DetailViewController.swift */,
 				93D133282211E180003A7516 /* CreateViewController.swift */,
 				93D132EE220E1F7A003A7516 /* HistoryViewController.swift */,
 				93D13300220E227A003A7516 /* TabBarController.swift */,
@@ -146,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				93D132D4220DF5CC003A7516 /* APIKeys.swift */,
+				934539C3221375420067C061 /* VenueCollection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 			files = (
 				93D133292211E180003A7516 /* CreateViewController.swift in Sources */,
 				93D132D5220DF5CC003A7516 /* APIKeys.swift in Sources */,
+				93D1332B2211E6CA003A7516 /* DetailViewController.swift in Sources */,
 				93D132FF220E21D0003A7516 /* DetailView.swift in Sources */,
 				93D132F3220E2031003A7516 /* ListView.swift in Sources */,
 				93D132F7220E20D5003A7516 /* FrontViewController.swift in Sources */,
@@ -269,6 +276,7 @@
 				93D13303220E2549003A7516 /* MapView.swift in Sources */,
 				93D132DF220DF7C8003A7516 /* ImageHelper.swift in Sources */,
 				93D132F9220E20E5003A7516 /* FrontView.swift in Sources */,
+				934539C4221375420067C061 /* VenueCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

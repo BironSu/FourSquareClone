@@ -11,11 +11,9 @@ import UIKit
 class FrontViewController: UIViewController {
 
     let frontView = FrontView()
-    let detailView = DetailView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(frontView)
-        view.addSubview(detailView)
     }
     
 
