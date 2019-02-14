@@ -101,9 +101,7 @@ class FrontView: UIView {
         button.layer.borderWidth = 1
         return button
     }()
-    
-    
-    
+
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
@@ -204,6 +202,7 @@ class FrontView: UIView {
         toDoButton.trailingAnchor.constraint(equalTo: mainSearchButton.trailingAnchor).isActive = true
         toDoButton.leadingAnchor.constraint(equalTo: nlButton.trailingAnchor, constant: 5).isActive = true
         toDoButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -40).isActive = true
+        backgroundColor = .green
     }
 }
 
