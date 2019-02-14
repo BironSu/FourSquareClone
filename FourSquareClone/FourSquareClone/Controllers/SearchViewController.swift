@@ -9,22 +9,25 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    let searchView = SearchView()
+   lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width - 130, height: 20))
+    
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.addSubview(searchView)
+        let leftNavBarButton = UIBarButtonItem(customView: self.searchBar)
+        let rightnavBarButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelPressed))
+        self.navigationItem.rightBarButtonItem = rightnavBarButton
+        self.navigationItem.leftBarButtonItem = leftNavBarButton
+       
+    }
+    
+    @objc private func cancelPressed() {
+        print("cancel pressed")
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

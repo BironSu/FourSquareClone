@@ -12,7 +12,7 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let collectionVC = CollectionListController()
         let frontVC = FrontViewController()
         frontVC.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search"), tag: 0)
         
@@ -22,19 +22,8 @@ class TabBarController: UITabBarController {
         let historyVC = HistoryViewController()
         historyVC.tabBarItem = UITabBarItem(title: "History", image: UIImage(named: "history"), tag: 2)
         
-        let tabBarLists = [frontVC, listVC, historyVC]
+        let tabBarLists = [collectionVC,frontVC, listVC, historyVC]
         viewControllers = tabBarLists.map(UINavigationController.init)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

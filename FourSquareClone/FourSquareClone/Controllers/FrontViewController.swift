@@ -14,6 +14,7 @@ class FrontViewController: UIViewController {
     let detailView = DetailView()
     override func viewDidLoad() {
         super.viewDidLoad()
+  
         view.addSubview(frontView)
         view.addSubview(detailView)
     }
