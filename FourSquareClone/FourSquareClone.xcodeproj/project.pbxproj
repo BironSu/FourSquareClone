@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		934539C4221375420067C061 /* VenueCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934539C3221375420067C061 /* VenueCollection.swift */; };
+=======
+		097DD0CD2211E11600207688 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097DD0CC2211E11600207688 /* SearchViewController.swift */; };
+		099800112215CDA200EBAEA2 /* CollectionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099800102215CDA200EBAEA2 /* CollectionListController.swift */; };
+		099800132215CDBF00EBAEA2 /* CollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099800122215CDBF00EBAEA2 /* CollectionListView.swift */; };
+		0998001A2216082100EBAEA2 /* CollectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099800192216082100EBAEA2 /* CollectionListTableViewCell.swift */; };
+>>>>>>> e24b6565c8875f12bc531d0b21f5baceb61215c9
 		93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132C2220DF33B003A7516 /* AppDelegate.swift */; };
 		93D132CA220DF33C003A7516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D132C9220DF33C003A7516 /* Assets.xcassets */; };
 		93D132CD220DF33C003A7516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D132CB220DF33C003A7516 /* LaunchScreen.storyboard */; };
@@ -36,7 +43,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		934539C3221375420067C061 /* VenueCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCollection.swift; sourceTree = "<group>"; };
+=======
+		097DD0CC2211E11600207688 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		099800102215CDA200EBAEA2 /* CollectionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListController.swift; sourceTree = "<group>"; };
+		099800122215CDBF00EBAEA2 /* CollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListView.swift; sourceTree = "<group>"; };
+		099800192216082100EBAEA2 /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
+>>>>>>> e24b6565c8875f12bc531d0b21f5baceb61215c9
 		93D132BF220DF33B003A7516 /* FourSquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D132C2220DF33B003A7516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D132C9220DF33C003A7516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09980018221607C500EBAEA2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				099800192216082100EBAEA2 /* CollectionListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		93D132B6220DF33B003A7516 = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +118,11 @@
 		93D132C1220DF33B003A7516 /* FourSquareClone */ = {
 			isa = PBXGroup;
 			children = (
+				09980018221607C500EBAEA2 /* Cell */,
 				93D132D8220DF6D7003A7516 /* Controllers */,
 				93D132D7220DF6C9003A7516 /* Views */,
 				93D132D9220DF6DC003A7516 /* Models */,
+				93D132D4220DF5CC003A7516 /* APIKeys.swift */,
 				93D132DA220DF706003A7516 /* File Manager Services */,
 				93D132E4220DF7F0003A7516 /* Date Helper */,
 				93D132DB220DF7AB003A7516 /* Network Services */,
@@ -129,6 +153,7 @@
 				93D132FA220E2145003A7516 /* CreateView.swift */,
 				93D132F4220E206C003A7516 /* HistoryView.swift */,
 				93D13302220E2549003A7516 /* MapView.swift */,
+				099800122215CDBF00EBAEA2 /* CollectionListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -137,12 +162,14 @@
 			isa = PBXGroup;
 			children = (
 				93D132F6220E20D5003A7516 /* FrontViewController.swift */,
+				099800102215CDA200EBAEA2 /* CollectionListController.swift */,
 				93D132EC220E1F74003A7516 /* ListViewController.swift */,
 				93D133262211E174003A7516 /* SavedViewController.swift */,
 				93D1332A2211E6CA003A7516 /* DetailViewController.swift */,
 				93D133282211E180003A7516 /* CreateViewController.swift */,
 				93D132EE220E1F7A003A7516 /* HistoryViewController.swift */,
 				93D13300220E227A003A7516 /* TabBarController.swift */,
+				097DD0CC2211E11600207688 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -150,8 +177,11 @@
 		93D132D9220DF6DC003A7516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				93D132D4220DF5CC003A7516 /* APIKeys.swift */,
 				934539C3221375420067C061 /* VenueCollection.swift */,
+=======
+>>>>>>> e24b6565c8875f12bc531d0b21f5baceb61215c9
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -253,24 +283,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				93D133292211E180003A7516 /* CreateViewController.swift in Sources */,
+=======
+				099800132215CDBF00EBAEA2 /* CollectionListView.swift in Sources */,
+>>>>>>> e24b6565c8875f12bc531d0b21f5baceb61215c9
 				93D132D5220DF5CC003A7516 /* APIKeys.swift in Sources */,
 				93D1332B2211E6CA003A7516 /* DetailViewController.swift in Sources */,
 				93D132FF220E21D0003A7516 /* DetailView.swift in Sources */,
 				93D132F3220E2031003A7516 /* ListView.swift in Sources */,
 				93D132F7220E20D5003A7516 /* FrontViewController.swift in Sources */,
+				0998001A2216082100EBAEA2 /* CollectionListTableViewCell.swift in Sources */,
 				93D132E8220DF818003A7516 /* Date+Extensions.swift in Sources */,
 				93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */,
 				93D132F1220E2029003A7516 /* SearchView.swift in Sources */,
 				93D132E1220DF7D1003A7516 /* NetworkHelper.swift in Sources */,
 				93D132F5220E206C003A7516 /* HistoryView.swift in Sources */,
+<<<<<<< HEAD
 				93D133272211E174003A7516 /* SavedViewController.swift in Sources */,
+=======
+				099800112215CDA200EBAEA2 /* CollectionListController.swift in Sources */,
+>>>>>>> e24b6565c8875f12bc531d0b21f5baceb61215c9
 				93D132EF220E1F7A003A7516 /* HistoryViewController.swift in Sources */,
 				93D13301220E227A003A7516 /* TabBarController.swift in Sources */,
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,
+				097DD0CD2211E11600207688 /* SearchViewController.swift in Sources */,
 				93D132E6220DF80B003A7516 /* String+DateExtensions.swift in Sources */,
 				93D132ED220E1F74003A7516 /* ListViewController.swift in Sources */,
 				93D13303220E2549003A7516 /* MapView.swift in Sources */,
@@ -415,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AVC7FB3M8N;
+				DEVELOPMENT_TEAM = RLKBJ6J8GQ;
 				INFOPLIST_FILE = FourSquareClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,7 +473,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AVC7FB3M8N;
+				DEVELOPMENT_TEAM = RLKBJ6J8GQ;
 				INFOPLIST_FILE = FourSquareClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

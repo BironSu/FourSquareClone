@@ -25,14 +25,15 @@ class FrontView: UIView {
     }()
     
     
-    lazy var mainSearchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.placeholder = "Search for event..."
-        searchBar.backgroundImage = UIImage()
-        searchBar.backgroundColor = .clear
-        //        searchBar.layer.borderWidth = 1
+    lazy var mainSearchButton: UIButton = {
+        let searchButton = UIButton()
+          searchButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
+        searchButton.setTitle("Search", for: .normal)
+        searchButton.layer.cornerRadius = 5
+     
         
-        return searchBar
+        searchButton.backgroundColor = UIColor.init(r: 244, g: 66, b: 149)
+        return searchButton
     }()
     
     lazy var bfButton: UIButton = {
@@ -100,9 +101,7 @@ class FrontView: UIView {
         button.layer.borderWidth = 1
         return button
     }()
-    
-    
-    
+
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
@@ -136,31 +135,31 @@ class FrontView: UIView {
         logoImage.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 50).isActive = true
         logoImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 11).isActive = true
         logoImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -11).isActive = true
-        logoImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        logoImage.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
     }
     func constrainSearchBar() {
-        addSubview(mainSearchBar)
-        mainSearchBar.translatesAutoresizingMaskIntoConstraints = false
-        mainSearchBar.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 60).isActive = true
-        mainSearchBar.centerXAnchor.constraint(equalTo: logoImage.centerXAnchor).isActive = true
-        mainSearchBar.widthAnchor.constraint(equalTo: logoImage.widthAnchor).isActive = true
+        addSubview(mainSearchButton)
+        mainSearchButton.translatesAutoresizingMaskIntoConstraints = false
+        mainSearchButton.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 60).isActive = true
+        mainSearchButton.centerXAnchor.constraint(equalTo: logoImage.centerXAnchor).isActive = true
+        mainSearchButton.widthAnchor.constraint(equalTo: logoImage.widthAnchor).isActive = true
     }
     func setButtons() {
         //bf button
         addSubview(bfButton)
         bfButton.translatesAutoresizingMaskIntoConstraints = false
-        bfButton.topAnchor.constraint(equalTo: mainSearchBar.bottomAnchor, constant: 100).isActive = true
+        bfButton.topAnchor.constraint(equalTo: mainSearchButton.bottomAnchor, constant: 100).isActive = true
         bfButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
         bfButton.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        bfButton.leadingAnchor.constraint(equalTo: mainSearchBar.leadingAnchor).isActive = true
+        bfButton.leadingAnchor.constraint(equalTo: mainSearchButton.leadingAnchor).isActive = true
         
         //lunch button
         addSubview(lunchButton)
         lunchButton.translatesAutoresizingMaskIntoConstraints = false
         lunchButton.heightAnchor.constraint(equalTo: bfButton.heightAnchor).isActive = true
         lunchButton.widthAnchor.constraint(equalTo: bfButton.widthAnchor).isActive = true
-        lunchButton.topAnchor.constraint(equalTo: mainSearchBar.bottomAnchor, constant: 100).isActive = true
+        lunchButton.topAnchor.constraint(equalTo: mainSearchButton.bottomAnchor, constant: 100).isActive = true
         lunchButton.leadingAnchor.constraint(equalTo: bfButton.trailingAnchor, constant: 5).isActive = true
         
         
@@ -169,8 +168,8 @@ class FrontView: UIView {
         dinerButton.translatesAutoresizingMaskIntoConstraints = false
         dinerButton.heightAnchor.constraint(equalTo: bfButton.heightAnchor).isActive = true
         dinerButton.widthAnchor.constraint(equalTo: bfButton.widthAnchor).isActive = true
-        dinerButton.topAnchor.constraint(equalTo: mainSearchBar.bottomAnchor, constant: 100).isActive = true
-        dinerButton.trailingAnchor.constraint(equalTo: mainSearchBar.trailingAnchor).isActive = true
+        dinerButton.topAnchor.constraint(equalTo: mainSearchButton.bottomAnchor, constant: 100).isActive = true
+        dinerButton.trailingAnchor.constraint(equalTo: mainSearchButton.trailingAnchor).isActive = true
         
         dinerButton.leadingAnchor.constraint(equalTo: lunchButton.trailingAnchor, constant: 5).isActive = true
         
@@ -181,7 +180,7 @@ class FrontView: UIView {
         coffeeButton.heightAnchor.constraint(equalTo: bfButton.heightAnchor).isActive = true
         coffeeButton.widthAnchor.constraint(equalTo: bfButton.widthAnchor).isActive = true
         coffeeButton.topAnchor.constraint(equalTo: bfButton.bottomAnchor, constant: 20).isActive = true
-        coffeeButton.leadingAnchor.constraint(equalTo: mainSearchBar.leadingAnchor).isActive = true
+        coffeeButton.leadingAnchor.constraint(equalTo: mainSearchButton.leadingAnchor).isActive = true
         coffeeButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -40).isActive = true
         
         
@@ -200,8 +199,18 @@ class FrontView: UIView {
         toDoButton.heightAnchor.constraint(equalTo: bfButton.heightAnchor).isActive = true
         toDoButton.widthAnchor.constraint(equalTo: bfButton.widthAnchor).isActive = true
         toDoButton.topAnchor.constraint(equalTo: dinerButton.bottomAnchor, constant: 20).isActive = true
-        toDoButton.trailingAnchor.constraint(equalTo: mainSearchBar.trailingAnchor).isActive = true
+        toDoButton.trailingAnchor.constraint(equalTo: mainSearchButton.trailingAnchor).isActive = true
         toDoButton.leadingAnchor.constraint(equalTo: nlButton.trailingAnchor, constant: 5).isActive = true
         toDoButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -40).isActive = true
+        backgroundColor = .green
+    }
+}
+
+
+//this extension u can call it so you dont have to divide to 255 each time
+//just call this init and just pass the rbg numbers
+extension UIColor {
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
+        self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
     }
 }

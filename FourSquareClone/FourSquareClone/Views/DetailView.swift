@@ -10,6 +10,7 @@ import UIKit
 
 class DetailView: UIView {
 
+<<<<<<< HEAD
     lazy var detailImage: UIImageView = {
         let detailI = UIImageView()
         detailI.backgroundColor = .lightGray
@@ -81,6 +82,9 @@ class DetailView: UIView {
         setupDirectionButton()
         setupFavoriteButton()
     }
+=======
+    
+>>>>>>> e24b6565c8875f12bc531d0b21f5baceb61215c9
 
 }
 
