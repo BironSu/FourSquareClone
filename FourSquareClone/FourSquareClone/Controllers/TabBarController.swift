@@ -12,7 +12,7 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let collectionVC = CollectionListController()
+      
         let frontVC = FrontViewController()
         frontVC.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search"), tag: 0)
         
@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
         let historyVC = HistoryViewController()
         historyVC.tabBarItem = UITabBarItem(title: "History", image: UIImage(named: "history"), tag: 2)
         
-        let tabBarLists = [collectionVC,frontVC, listVC, historyVC]
+        let tabBarLists = [frontVC, listVC, historyVC]
         viewControllers = tabBarLists.map(UINavigationController.init)
     }
 
