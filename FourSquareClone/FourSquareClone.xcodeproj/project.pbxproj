@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B9B2BF02211E5110062B06A /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9B2BEF2211E5110062B06A /* ListCollectionViewCell.swift */; };
 		93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132C2220DF33B003A7516 /* AppDelegate.swift */; };
 		93D132CA220DF33C003A7516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D132C9220DF33C003A7516 /* Assets.xcassets */; };
 		93D132CD220DF33C003A7516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D132CB220DF33C003A7516 /* LaunchScreen.storyboard */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B9B2BEF2211E5110062B06A /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		93D132BF220DF33B003A7516 /* FourSquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D132C2220DF33B003A7516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D132C9220DF33C003A7516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				93D132F6220E20D5003A7516 /* FrontViewController.swift */,
 				93D132EC220E1F74003A7516 /* ListViewController.swift */,
+				2B9B2BEF2211E5110062B06A /* ListCollectionViewCell.swift */,
 				93D132EE220E1F7A003A7516 /* HistoryViewController.swift */,
 				93D13300220E227A003A7516 /* TabBarController.swift */,
 			);
@@ -256,6 +259,7 @@
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,
+				2B9B2BF02211E5110062B06A /* ListCollectionViewCell.swift in Sources */,
 				93D132E6220DF80B003A7516 /* String+DateExtensions.swift in Sources */,
 				93D132ED220E1F74003A7516 /* ListViewController.swift in Sources */,
 				93D13303220E2549003A7516 /* MapView.swift in Sources */,
