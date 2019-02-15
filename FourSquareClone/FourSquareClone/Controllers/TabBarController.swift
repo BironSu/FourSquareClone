@@ -13,6 +13,9 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        
+        
         let frontVC = FrontViewController()
         frontVC.tabBarItem = UITabBarItem(title: "Search", image: UIImage(named: "search"), tag: 0)
         
