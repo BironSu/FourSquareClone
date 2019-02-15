@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		0904E3AF221756F500B4066E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3AE221756F500B4066E /* Photo.swift */; };
+		0904E3B12217594800B4066E /* NearByModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B02217594800B4066E /* NearByModel.swift */; };
+		0904E3B322175EF300B4066E /* VenueDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B222175EF300B4066E /* VenueDetailModel.swift */; };
+		0904E3B5221765C800B4066E /* SavedVenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B4221765C800B4066E /* SavedVenueModel.swift */; };
 		099800202216221500EBAEA2 /* CollectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */; };
 		099800222216225600EBAEA2 /* CollectionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099800212216225600EBAEA2 /* CollectionListController.swift */; };
 		09980024221622A100EBAEA2 /* CollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09980023221622A100EBAEA2 /* CollectionListView.swift */; };
@@ -39,6 +44,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		0904E3AE221756F500B4066E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		0904E3B02217594800B4066E /* NearByModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByModel.swift; sourceTree = "<group>"; };
+		0904E3B222175EF300B4066E /* VenueDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailModel.swift; sourceTree = "<group>"; };
+		0904E3B4221765C800B4066E /* SavedVenueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVenueModel.swift; sourceTree = "<group>"; };
 		0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
 		099800212216225600EBAEA2 /* CollectionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListController.swift; sourceTree = "<group>"; };
 		09980023221622A100EBAEA2 /* CollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListView.swift; sourceTree = "<group>"; };
@@ -169,6 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				93D132D4220DF5CC003A7516 /* APIKeys.swift */,
+				0904E3AE221756F500B4066E /* Photo.swift */,
+				0904E3B02217594800B4066E /* NearByModel.swift */,
+				0904E3B222175EF300B4066E /* VenueDetailModel.swift */,
+				0904E3B4221765C800B4066E /* SavedVenueModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0904E3AF221756F500B4066E /* Photo.swift in Sources */,
 				09980024221622A100EBAEA2 /* CollectionListView.swift in Sources */,
 				93D132D5220DF5CC003A7516 /* APIKeys.swift in Sources */,
 				93D132FF220E21D0003A7516 /* DetailView.swift in Sources */,
@@ -281,12 +296,15 @@
 				0998002A2216248700EBAEA2 /* SearchViewController.swift in Sources */,
 				93D132F1220E2029003A7516 /* SearchView.swift in Sources */,
 				93D132E1220DF7D1003A7516 /* NetworkHelper.swift in Sources */,
+				0904E3B322175EF300B4066E /* VenueDetailModel.swift in Sources */,
 				099800202216221500EBAEA2 /* CollectionListTableViewCell.swift in Sources */,
 				099800222216225600EBAEA2 /* CollectionListController.swift in Sources */,
+				0904E3B5221765C800B4066E /* SavedVenueModel.swift in Sources */,
 				93D132F5220E206C003A7516 /* HistoryView.swift in Sources */,
 				93D132EF220E1F7A003A7516 /* HistoryViewController.swift in Sources */,
 				93D13301220E227A003A7516 /* TabBarController.swift in Sources */,
 				099800282216245000EBAEA2 /* CreateViewController.swift in Sources */,
+				0904E3B12217594800B4066E /* NearByModel.swift in Sources */,
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
