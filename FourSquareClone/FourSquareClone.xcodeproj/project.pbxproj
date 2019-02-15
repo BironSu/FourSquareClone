@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		0904E3AF221756F500B4066E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3AE221756F500B4066E /* Photo.swift */; };
 		0904E3B12217594800B4066E /* NearByModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B02217594800B4066E /* NearByModel.swift */; };
 		0904E3B322175EF300B4066E /* VenueDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B222175EF300B4066E /* VenueDetailModel.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
 		0904E3AE221756F500B4066E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0904E3B02217594800B4066E /* NearByModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByModel.swift; sourceTree = "<group>"; };
 		0904E3B222175EF300B4066E /* VenueDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailModel.swift; sourceTree = "<group>"; };
