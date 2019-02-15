@@ -12,18 +12,29 @@ class ListViewController: UIViewController {
 
     let listView = ListView()
     let savedView = SavedView()
+    let createView = CreateView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(listView)
-        view.addSubview(savedView)
+//        view.addSubview(savedView)
         listView.listCollectionView.dataSource = self
         listView.listCollectionView.delegate = self
+
+        //view.addSubview(createView)
+        createView.dismissButton.addTarget(self, action: #selector(dismissFunc), for: .touchUpInside)
+    }
+    @objc private func dismissFunc() {
+        print("does this work")
+        dismiss(animated: true, completion: nil)
+    }
+
+    
     }
     
 
    
 
-}
+
 extension ListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
@@ -35,4 +46,5 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     
     
+
 }

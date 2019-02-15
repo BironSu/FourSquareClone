@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		099800202216221500EBAEA2 /* CollectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */; };
+		099800222216225600EBAEA2 /* CollectionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099800212216225600EBAEA2 /* CollectionListController.swift */; };
+		09980024221622A100EBAEA2 /* CollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09980023221622A100EBAEA2 /* CollectionListView.swift */; };
+		09980026221623F600EBAEA2 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09980025221623F600EBAEA2 /* SavedViewController.swift */; };
+		099800282216245000EBAEA2 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099800272216245000EBAEA2 /* CreateViewController.swift */; };
+		0998002A2216248700EBAEA2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099800292216248700EBAEA2 /* SearchViewController.swift */; };
 		2B9B2BF02211E5110062B06A /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9B2BEF2211E5110062B06A /* ListCollectionViewCell.swift */; };
 		93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132C2220DF33B003A7516 /* AppDelegate.swift */; };
 		93D132CA220DF33C003A7516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D132C9220DF33C003A7516 /* Assets.xcassets */; };
@@ -33,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
+		099800212216225600EBAEA2 /* CollectionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListController.swift; sourceTree = "<group>"; };
+		09980023221622A100EBAEA2 /* CollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListView.swift; sourceTree = "<group>"; };
+		09980025221623F600EBAEA2 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		099800272216245000EBAEA2 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		099800292216248700EBAEA2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2B9B2BEF2211E5110062B06A /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
 		93D132BF220DF33B003A7516 /* FourSquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D132C2220DF33B003A7516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0998001E221621CE00EBAEA2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		93D132B6220DF33B003A7516 = {
 			isa = PBXGroup;
 			children = (
@@ -90,10 +112,10 @@
 		93D132C1220DF33B003A7516 /* FourSquareClone */ = {
 			isa = PBXGroup;
 			children = (
+				0998001E221621CE00EBAEA2 /* Cell */,
 				93D132D8220DF6D7003A7516 /* Controllers */,
 				93D132D7220DF6C9003A7516 /* Views */,
 				93D132D9220DF6DC003A7516 /* Models */,
-				93D132D4220DF5CC003A7516 /* APIKeys.swift */,
 				93D132DA220DF706003A7516 /* File Manager Services */,
 				93D132E4220DF7F0003A7516 /* Date Helper */,
 				93D132DB220DF7AB003A7516 /* Network Services */,
@@ -124,6 +146,7 @@
 				93D132FA220E2145003A7516 /* CreateView.swift */,
 				93D132F4220E206C003A7516 /* HistoryView.swift */,
 				93D13302220E2549003A7516 /* MapView.swift */,
+				09980023221622A100EBAEA2 /* CollectionListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +159,10 @@
 				2B9B2BEF2211E5110062B06A /* ListCollectionViewCell.swift */,
 				93D132EE220E1F7A003A7516 /* HistoryViewController.swift */,
 				93D13300220E227A003A7516 /* TabBarController.swift */,
+				099800212216225600EBAEA2 /* CollectionListController.swift */,
+				09980025221623F600EBAEA2 /* SavedViewController.swift */,
+				099800272216245000EBAEA2 /* CreateViewController.swift */,
+				099800292216248700EBAEA2 /* SearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -143,6 +170,7 @@
 		93D132D9220DF6DC003A7516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				93D132D4220DF5CC003A7516 /* APIKeys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,17 +272,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09980024221622A100EBAEA2 /* CollectionListView.swift in Sources */,
 				93D132D5220DF5CC003A7516 /* APIKeys.swift in Sources */,
 				93D132FF220E21D0003A7516 /* DetailView.swift in Sources */,
 				93D132F3220E2031003A7516 /* ListView.swift in Sources */,
 				93D132F7220E20D5003A7516 /* FrontViewController.swift in Sources */,
 				93D132E8220DF818003A7516 /* Date+Extensions.swift in Sources */,
+				09980026221623F600EBAEA2 /* SavedViewController.swift in Sources */,
 				93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */,
+				0998002A2216248700EBAEA2 /* SearchViewController.swift in Sources */,
 				93D132F1220E2029003A7516 /* SearchView.swift in Sources */,
 				93D132E1220DF7D1003A7516 /* NetworkHelper.swift in Sources */,
+				099800202216221500EBAEA2 /* CollectionListTableViewCell.swift in Sources */,
+				099800222216225600EBAEA2 /* CollectionListController.swift in Sources */,
 				93D132F5220E206C003A7516 /* HistoryView.swift in Sources */,
 				93D132EF220E1F7A003A7516 /* HistoryViewController.swift in Sources */,
 				93D13301220E227A003A7516 /* TabBarController.swift in Sources */,
+				099800282216245000EBAEA2 /* CreateViewController.swift in Sources */,
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
@@ -403,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RLKBJ6J8GQ;
+				DEVELOPMENT_TEAM = AVC7FB3M8N;
 				INFOPLIST_FILE = FourSquareClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -421,7 +455,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RLKBJ6J8GQ;
+				DEVELOPMENT_TEAM = AVC7FB3M8N;
 				INFOPLIST_FILE = FourSquareClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
