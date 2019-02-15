@@ -15,8 +15,11 @@ class ListViewController: UIViewController {
     let createView = CreateView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.addSubview(listView)
-        view.addSubview(savedView)
+        view.addSubview(listView)
+//        view.addSubview(savedView)
+        listView.listCollectionView.dataSource = self
+        listView.listCollectionView.delegate = self
+
         //view.addSubview(createView)
         createView.dismissButton.addTarget(self, action: #selector(dismissFunc), for: .touchUpInside)
     }
@@ -24,5 +27,24 @@ class ListViewController: UIViewController {
         print("does this work")
         dismiss(animated: true, completion: nil)
     }
+
+    
+    }
+    
+
+   
+
+
+extension ListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCell", for: indexPath) as? ListCollectionViewCell else { return UICollectionViewCell() }
+        return cell
+    }
+    
+    
+    
 
 }
