@@ -8,15 +8,12 @@
 
 import UIKit
 import MapKit
-
 class MapViewController: UIViewController {
-let mapView = MapView()
-    
-    
+    let mapView = MapView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      view.addSubview(mapView)
+        view.addSubview(mapView)
     }
     
 }

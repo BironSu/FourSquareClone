@@ -90,8 +90,8 @@ extension DetailView {
         detailImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             detailImage.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 0),
-            detailImage.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            detailImage.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            detailImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            detailImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
             detailImage.heightAnchor.constraint(equalToConstant: 300)
             ])
     }

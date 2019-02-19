@@ -16,6 +16,7 @@ class ListView: UIView {
         button.layer.cornerRadius = 10
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
         button.titleLabel?.textColor = .white
+        button.isEnabled = true
         return button
     }()
     

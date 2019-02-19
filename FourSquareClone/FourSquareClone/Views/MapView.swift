@@ -14,7 +14,7 @@ class MapView: UIView {
         let map = MKMapView()
         return map
     }()
-   
+    
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
@@ -37,6 +37,4 @@ class MapView: UIView {
         mapView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
     }
-    
-
 }
