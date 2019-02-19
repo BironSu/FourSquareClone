@@ -18,21 +18,27 @@ class HistoryViewController: UIViewController {
         self.view.addSubview(historyView)
         historyView.delegate = self
         historyView.historyTableView.dataSource = self
+        historyView.historyTableView.delegate = self
         self.title = "History"
     }
     
 }
 
-extension HistoryViewController: UITableViewDataSource {
+extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") else {return UITableViewCell()}
+        cell.textLabel?.text = indexPath.row.description
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        print(indexPath.row.description)
+        navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 

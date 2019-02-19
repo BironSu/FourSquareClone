@@ -12,7 +12,6 @@ class CollectionListView: UIView {
     lazy var collectionListTableView: UITableView = {
         let myTableView = UITableView()
         myTableView.layer.cornerRadius = 10
-        //        myTableView.backgroundColor = .white
         myTableView.register(CollectionListTableViewCell.self, forCellReuseIdentifier: "CollectionCell")
         return myTableView
     }()
@@ -49,6 +48,7 @@ class CollectionListView: UIView {
     
     
     private func commonInit() {
+        self.backgroundColor = UIColor.init(white: 1.0, alpha: 0.5)
         setupTableViewConstrinas()
         setLabelConstrains()
         setButtonContrains()

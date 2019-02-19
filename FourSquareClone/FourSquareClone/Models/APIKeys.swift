@@ -9,7 +9,6 @@
 import Foundation
 
 class APIKey {
-
     static let key = "Y2CRHLTWH3B0JZZUASM1QQOK0BZRCHQQ1LVTOBUDA1LAAOKI"
     static let secretKey = "uiroehd"
 }
