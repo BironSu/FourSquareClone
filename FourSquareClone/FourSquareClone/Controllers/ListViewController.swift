@@ -11,29 +11,19 @@ import UIKit
 class ListViewController: UIViewController {
 
     let listView = ListView()
-    let savedView = SavedView()
-    let createView = CreateView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(listView)
-//        view.addSubview(savedView)
         listView.listCollectionView.dataSource = self
         listView.listCollectionView.delegate = self
-
-        //view.addSubview(createView)
-        createView.dismissButton.addTarget(self, action: #selector(dismissFunc), for: .touchUpInside)
+        listView.createListButton.addTarget(self, action: #selector(createFunc), for: .touchUpInside)
     }
-    @objc private func dismissFunc() {
-        print("does this work")
-        dismiss(animated: true, completion: nil)
+    @objc private func createFunc() {
+        let vc = CreateViewController()
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
-
-    
-    }
-    
-
-   
-
+}
 
 extension ListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -43,8 +33,10 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ListCell", for: indexPath) as? ListCollectionViewCell else { return UICollectionViewCell() }
         return cell
     }
-    
-    
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = SavedViewController()
+        print(indexPath.row)
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
 }
