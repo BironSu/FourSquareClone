@@ -12,7 +12,7 @@ class CreateView: UIView {
 
     lazy var dismissButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .gray
+        button.backgroundColor = UIColor.init(white: 1.0, alpha: 0.5)
         return button
     }()
     lazy var createButton: UIButton = {

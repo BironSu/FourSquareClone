@@ -11,27 +11,22 @@ import UIKit
 class CollectionListController: UIViewController {
     let collectionListView = CollectionListView()
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionListView)
         collectionListView.collectionListTableView.delegate = self
         collectionListView.collectionListTableView.dataSource = self
-        
+        collectionListView.createButton.addTarget(self, action: #selector(createListSave), for: .touchUpInside)
     }
-    
-    
+    @objc private func createListSave() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 extension CollectionListController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
     }
-    
-    
-    
 }
 
 extension CollectionListController: UITableViewDataSource {
