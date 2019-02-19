@@ -9,7 +9,7 @@
 import UIKit
 
 class FrontViewController: UIViewController {
-
+    let tipView = TipsView()
     let frontView = FrontView()
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,15 +16,23 @@ class DetailViewController: UIViewController {
         view.addSubview(detailVC)
         detailVC.directionButton.addTarget(self, action: #selector(mapSegue), for: .touchUpInside)
         detailVC.favoriteButton.addTarget(self, action: #selector(favoriteSegue), for: .touchUpInside)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tips", style: .plain, target: self, action: #selector(tipsPressed))
+        
     }
     @objc private func mapSegue(){
         let vc = MapViewController()
         navigationController?.pushViewController(vc, animated: true)
+        
     }
 
     @objc private func favoriteSegue() {
         let vc = CollectionListController()
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true, completion: nil)
+    }
+    
+    @objc private func tipsPressed() {
+        let tipVC = TipsViewController()
+        navigationController?.pushViewController(tipVC, animated: true)
     }
 }
