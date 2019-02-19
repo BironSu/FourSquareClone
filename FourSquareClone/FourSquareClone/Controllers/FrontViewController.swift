@@ -11,14 +11,10 @@ import UIKit
 class FrontViewController: UIViewController {
 
     let frontView = FrontView()
-    let detailView = DetailView()
-    
-//    let mapview = MapView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(frontView)
-//        view.addSubview(detailView)
-//        view.addSubview(mapview)
     }
     
 
