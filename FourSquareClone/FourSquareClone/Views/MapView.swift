@@ -37,6 +37,4 @@ class MapView: UIView {
         mapView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
     }
-    
-    
 }

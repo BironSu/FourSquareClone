@@ -13,7 +13,6 @@ class SearchViewController: UIViewController {
     // search key holds the value of the button title sent from frontview VC
     var searchKey = ""
     lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width - 130, height: 20))
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(searchView)
