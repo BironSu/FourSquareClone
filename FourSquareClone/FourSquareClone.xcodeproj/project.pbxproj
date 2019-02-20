@@ -14,6 +14,8 @@
 		0904E3B322175EF300B4066E /* VenueDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B222175EF300B4066E /* VenueDetailModel.swift */; };
 		0904E3B5221765C800B4066E /* SavedVenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B4221765C800B4066E /* SavedVenueModel.swift */; };
 		0904E3B72217723A00B4066E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B62217723A00B4066E /* MapViewController.swift */; };
+		0992F863221DE82A00322D74 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992F862221DE82A00322D74 /* Category.swift */; };
+		0992F866221DFF1800322D74 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992F865221DFF1800322D74 /* LocationService.swift */; };
 		099800202216221500EBAEA2 /* CollectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */; };
 		099800222216225600EBAEA2 /* CollectionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099800212216225600EBAEA2 /* CollectionListController.swift */; };
 		09980024221622A100EBAEA2 /* CollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09980023221622A100EBAEA2 /* CollectionListView.swift */; };
@@ -58,6 +60,8 @@
 		0904E3B222175EF300B4066E /* VenueDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailModel.swift; sourceTree = "<group>"; };
 		0904E3B4221765C800B4066E /* SavedVenueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVenueModel.swift; sourceTree = "<group>"; };
 		0904E3B62217723A00B4066E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0992F862221DE82A00322D74 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		0992F865221DFF1800322D74 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
 		099800212216225600EBAEA2 /* CollectionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListController.swift; sourceTree = "<group>"; };
 		09980023221622A100EBAEA2 /* CollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0992F864221DF54100322D74 /* Location Services */ = {
+			isa = PBXGroup;
+			children = (
+				0992F865221DFF1800322D74 /* LocationService.swift */,
+			);
+			path = "Location Services";
+			sourceTree = "<group>";
+		};
 		0998001E221621CE00EBAEA2 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +174,7 @@
 		93D132D7220DF6C9003A7516 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0992F864221DF54100322D74 /* Location Services */,
 				93D132F8220E20E5003A7516 /* FrontView.swift */,
 				09EF30F7221CA2EA00DF1222 /* TipsView.swift */,
 				93D132F0220E2029003A7516 /* SearchView.swift */,
@@ -205,6 +218,7 @@
 				0904E3B222175EF300B4066E /* VenueDetailModel.swift */,
 				0904E3B4221765C800B4066E /* SavedVenueModel.swift */,
 				014CA10E221C94FC002A3C0E /* CategoryModel.swift */,
+				0992F862221DE82A00322D74 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -311,6 +325,7 @@
 				93D132D5220DF5CC003A7516 /* APIKeys.swift in Sources */,
 				09EF30FA221CA3D100DF1222 /* TipTableViewCell.swift in Sources */,
 				93D132FF220E21D0003A7516 /* DetailView.swift in Sources */,
+				0992F866221DFF1800322D74 /* LocationService.swift in Sources */,
 				93D132F3220E2031003A7516 /* ListView.swift in Sources */,
 				014CA10D221C717A002A3C0E /* APIClient.swift in Sources */,
 				93D132F7220E20D5003A7516 /* FrontViewController.swift in Sources */,
@@ -334,11 +349,10 @@
 				0904E3B12217594800B4066E /* NearByModel.swift in Sources */,
 				09EF30F8221CA2EA00DF1222 /* TipsView.swift in Sources */,
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
-
-				93DFE14B2217558F009BD8AA /* ListCollectionViewCell.swift in Sources */,
 				014CA10F221C94FC002A3C0E /* CategoryModel.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
+				0992F863221DE82A00322D74 /* Category.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,
 				93D132E6220DF80B003A7516 /* String+DateExtensions.swift in Sources */,
 				93D132ED220E1F74003A7516 /* ListViewController.swift in Sources */,

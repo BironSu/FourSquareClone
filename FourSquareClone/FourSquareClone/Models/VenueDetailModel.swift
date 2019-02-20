@@ -24,10 +24,26 @@ struct SingleVenueInfo: Codable {
     let name: String
     let contact: Contact
     //location goes here
+    let location: LocationInformation?
     let categories: SingleCategory
     let photo: SingleVenuePhotos
     let hours: Hour
 }
+
+struct LocationInformation: Codable {
+    let address: String
+    let crossStreet: String?
+    let lat: Double
+    let lng: Double
+    let distance: Int
+    let postalCode: String
+    let cc: String
+    let city: String
+    let state: String
+    let country: String
+}
+
+
 
 struct Contact: Codable {
     let phone: String
