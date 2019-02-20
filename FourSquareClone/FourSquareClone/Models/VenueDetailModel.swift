@@ -43,7 +43,8 @@ struct SingleCategory: Codable {
 }
 
 struct SingleVenuePhotos: Codable {
-    let groups: [PhotoGroup]
+    let prefix: String
+    let suffix: String
 }
 
 struct PhotoGroup: Codable {
