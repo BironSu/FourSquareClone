@@ -17,7 +17,7 @@ class CreateView: UIView {
     }()
     lazy var createButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = .blue
+        button.backgroundColor = .gray
         button.setTitle("Done", for: .normal)
         button.layer.cornerRadius = 10.0
         return button
@@ -47,7 +47,6 @@ class CreateView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
-        fatalError("init(coder:) failed to implement")
     }
     private func commonInit(){
         setupConstraints()
