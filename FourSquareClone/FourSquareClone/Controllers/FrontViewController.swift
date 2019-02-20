@@ -30,6 +30,7 @@ class FrontViewController: UIViewController {
         if let currentTitle = sender.currentTitle {
             let searchVC = SearchViewController()
             searchVC.searchKey = currentTitle
+            searchVC.buttonSearch = true
             navigationController?.pushViewController(searchVC, animated: true)
         }
     }

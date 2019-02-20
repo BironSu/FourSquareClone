@@ -48,6 +48,7 @@
 		93D13303220E2549003A7516 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D13302220E2549003A7516 /* MapView.swift */; };
 		93DFE14D22189741009BD8AA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFE14C22189741009BD8AA /* DetailViewController.swift */; };
 		93DFE14F221899CF009BD8AA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DFE14E221899CF009BD8AA /* MapViewController.swift */; };
+		93E4BB8C221DF7E900A67A4E /* QueryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4BB8B221DF7E900A67A4E /* QueryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		93D13302220E2549003A7516 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		93DFE14C22189741009BD8AA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		93DFE14E221899CF009BD8AA /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		93E4BB8B221DF7E900A67A4E /* QueryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 				0904E3B222175EF300B4066E /* VenueDetailModel.swift */,
 				0904E3B4221765C800B4066E /* SavedVenueModel.swift */,
 				014CA10E221C94FC002A3C0E /* CategoryModel.swift */,
+				93E4BB8B221DF7E900A67A4E /* QueryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,14 +337,13 @@
 				0904E3B12217594800B4066E /* NearByModel.swift in Sources */,
 				09EF30F8221CA2EA00DF1222 /* TipsView.swift in Sources */,
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
-
-				93DFE14B2217558F009BD8AA /* ListCollectionViewCell.swift in Sources */,
 				014CA10F221C94FC002A3C0E /* CategoryModel.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,
 				93D132E6220DF80B003A7516 /* String+DateExtensions.swift in Sources */,
 				93D132ED220E1F74003A7516 /* ListViewController.swift in Sources */,
+				93E4BB8C221DF7E900A67A4E /* QueryModel.swift in Sources */,
 				93D13303220E2549003A7516 /* MapView.swift in Sources */,
 				93D132DF220DF7C8003A7516 /* ImageHelper.swift in Sources */,
 				93D132F9220E20E5003A7516 /* FrontView.swift in Sources */,
