@@ -9,10 +9,18 @@
 import UIKit
 
 class ListView: UIView {
+    lazy var bgImage: UIImageView = {
+        let image = UIImageView()
+        let myimage = UIImage(named: "foursquare")
+        image.image = myimage
+        return image
+    }()
+    
+    
     lazy var createListButton: UIButton = {
         let button = UIButton()
         button.setTitle("Create", for: .normal)
-        button.backgroundColor = .red
+        button.backgroundColor = UIColor.init(r: 244, g: 66, b: 149)
         button.layer.cornerRadius = 10
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 25)
         button.titleLabel?.textColor = .white
@@ -27,7 +35,7 @@ class ListView: UIView {
         layout.sectionInset = UIEdgeInsets.init(top: 20, left: 10, bottom: 20, right: 10)
         let lcv = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         lcv.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: "ListCell")
-        lcv.backgroundColor = .white
+        lcv.backgroundColor = .clear
         return lcv
     }()
 
@@ -38,13 +46,24 @@ class ListView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
-        fatalError("init(coder:) failed to implement")
     }
     private func commonInit(){
-        backgroundColor = .blue
+        setupbgImage()
         setConstraints()
         setButtonConstrains()
     }
+    
+    private func setupbgImage() {
+        addSubview(bgImage)
+        bgImage.translatesAutoresizingMaskIntoConstraints = false
+        bgImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        bgImage.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        bgImage.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        bgImage.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+    }
+
+    
+    
     func setConstraints() {
         self.addSubview(listCollectionView)
         listCollectionView.translatesAutoresizingMaskIntoConstraints = false

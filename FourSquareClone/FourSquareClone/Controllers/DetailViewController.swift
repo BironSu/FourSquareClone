@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(detailVC)
+        
         detailVC.directionButton.addTarget(self, action: #selector(mapSegue), for: .touchUpInside)
         detailVC.favoriteButton.addTarget(self, action: #selector(favoriteSegue), for: .touchUpInside)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tips", style: .plain, target: self, action: #selector(tipsPressed))
