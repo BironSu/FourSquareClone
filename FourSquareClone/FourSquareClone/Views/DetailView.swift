@@ -91,7 +91,7 @@ class DetailView: UIView {
         setupDetailImage()
         setupTitleLabel()
         setupAddressLabel()
-        setupHoursLabel()
+        //setupHoursLabel()
         setupCategoryLabel()
         setupDirectionButton()
         setupFavoriteButton()
@@ -157,8 +157,8 @@ extension DetailView {
         NSLayoutConstraint.activate([
             categoryLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             categoryLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            categoryLabel.heightAnchor.constraint(equalToConstant: 40),
-            categoryLabel.topAnchor.constraint(equalTo: hoursLabel.bottomAnchor, constant: 20)
+            categoryLabel.heightAnchor.constraint(equalToConstant: 80),
+            categoryLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 20)
             ])
     }
     private func setupDirectionButton() {

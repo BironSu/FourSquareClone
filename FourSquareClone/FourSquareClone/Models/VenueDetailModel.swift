@@ -18,16 +18,20 @@ struct ResponseVenue: Codable {
     let venue: SingleVenueInfo
 }
 
-
 struct SingleVenueInfo: Codable {
     let id: String
     let name: String
     let contact: Contact
     //location goes here
+<<<<<<< HEAD
     let location: LocationInformation?
     let categories: SingleCategory
     let photo: SingleVenuePhotos
     let hours: Hour
+=======
+    let categories: [SingleCategory]
+    let bestPhoto: SingleVenuePhotos?
+>>>>>>> feadbc6bfe5d8cdad51d2bab4ba65482093a6bec
 }
 
 struct LocationInformation: Codable {
@@ -59,6 +63,7 @@ struct SingleCategory: Codable {
 }
 
 struct SingleVenuePhotos: Codable {
+<<<<<<< HEAD
     let prefix: String
     let suffix: String
 }
@@ -69,14 +74,10 @@ struct PhotoGroup: Codable {
 
 struct PhotoItem: Codable {
     let id: String
+=======
+>>>>>>> feadbc6bfe5d8cdad51d2bab4ba65482093a6bec
     let prefix: String
     let suffix: String
-}
-
-struct Hour: Codable {
-    let status: String
-    //isOpen goes here
-    let timeframes: [TimeFrame]
 }
 
 struct TimeFrame: Codable {
