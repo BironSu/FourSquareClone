@@ -13,7 +13,9 @@ struct CatCategory: Codable {
 }
 
 struct CatResponse: Codable {
+    
     let group: CatGroup?
+    
 }
 
 struct CatGroup: Codable {
