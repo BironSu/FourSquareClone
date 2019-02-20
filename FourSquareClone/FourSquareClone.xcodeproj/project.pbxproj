@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		014CA10D221C717A002A3C0E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CA10C221C717A002A3C0E /* APIClient.swift */; };
-
+		014CA10F221C94FC002A3C0E /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014CA10E221C94FC002A3C0E /* CategoryModel.swift */; };
 		0904E3AF221756F500B4066E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3AE221756F500B4066E /* Photo.swift */; };
 		0904E3B12217594800B4066E /* NearByModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B02217594800B4066E /* NearByModel.swift */; };
 		0904E3B322175EF300B4066E /* VenueDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B222175EF300B4066E /* VenueDetailModel.swift */; };
@@ -49,15 +48,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
 		014CA10C221C717A002A3C0E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-
+		014CA10E221C94FC002A3C0E /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		0904E3AE221756F500B4066E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0904E3B02217594800B4066E /* NearByModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearByModel.swift; sourceTree = "<group>"; };
 		0904E3B222175EF300B4066E /* VenueDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailModel.swift; sourceTree = "<group>"; };
 		0904E3B4221765C800B4066E /* SavedVenueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVenueModel.swift; sourceTree = "<group>"; };
 		0904E3B62217723A00B4066E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-
 		0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
 		099800212216225600EBAEA2 /* CollectionListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListController.swift; sourceTree = "<group>"; };
 		09980023221622A100EBAEA2 /* CollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListView.swift; sourceTree = "<group>"; };
@@ -198,6 +195,7 @@
 				0904E3B02217594800B4066E /* NearByModel.swift */,
 				0904E3B222175EF300B4066E /* VenueDetailModel.swift */,
 				0904E3B4221765C800B4066E /* SavedVenueModel.swift */,
+				014CA10E221C94FC002A3C0E /* CategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -324,6 +322,7 @@
 				0904E3B12217594800B4066E /* NearByModel.swift in Sources */,
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
 				93DFE14B2217558F009BD8AA /* ListCollectionViewCell.swift in Sources */,
+				014CA10F221C94FC002A3C0E /* CategoryModel.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,

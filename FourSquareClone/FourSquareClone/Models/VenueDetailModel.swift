@@ -25,7 +25,7 @@ struct SingleVenueInfo: Codable {
     let contact: Contact
     //location goes here
     let categories: SingleCategory
-    let photos: SingleVenuePhotos
+    let photo: SingleVenuePhotos
     let hours: Hour
 }
 
