@@ -14,34 +14,21 @@ protocol LocationResultsControllerDelegate: AnyObject {
     func didSelectCoordinate(_ locationResultsController: MapViewController, coordinate: CLLocationCoordinate2D)
     func didScrollTableView(_ locationResultsController: MapViewController)
 }
-
-
-
-
 class MapViewController: UIViewController {
-    //private var annotation: MKAnnotation!
-//    public var venueInfo =
-private let searchCompleter = MKLocalSearchCompleter()
+    private let searchCompleter = MKLocalSearchCompleter()
     private let completerResults = [MKLocalSearchCompletion]()
-    
     weak var delegate: LocationResultsControllerDelegate?
-    
     let mapView = MapView()
-
     var venueLocation: SingleVenueInfo!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(mapView)
         mapView.mapView.delegate = self
+        getAnnotation()
     }
-    
-    
     private func getAnnotation() {
-    //mapView.mapView.removeAnnotation(annotation)
-        guard let location = venueLocation.location else {
-            print("location is nil")
-            return
-        }
+        let location = venueLocation.location
         let coordinate = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng)
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
@@ -50,14 +37,6 @@ private let searchCompleter = MKLocalSearchCompleter()
         mapView.mapView.showAnnotations([annotation], animated: true)
         mapView.mapView.setRegion(region, animated: true)
     }
-
-    
-    
 }
-
 extension MapViewController: MKMapViewDelegate {
-    
-    
-    
-    
 }

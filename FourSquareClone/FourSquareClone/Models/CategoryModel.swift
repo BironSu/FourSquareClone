@@ -9,21 +9,19 @@
 import Foundation
 
 struct CatCategory: Codable {
-    let response: CatResponse?
+    let response: CatResponse
 }
 
 struct CatResponse: Codable {
-    
-    let group: CatGroup?
-    
+    let group: CatGroup
 }
 
 struct CatGroup: Codable {
-    let results: [CatResult]?
+    let results: [CatResult]
 }
 
 struct CatResult: Codable {
-    let venue: CatVenueInfo?
+    let venue: CatVenueInfo
     let photo: CatPhoto?
 }
 struct CatPhoto: Codable {
@@ -33,4 +31,18 @@ struct CatPhoto: Codable {
 struct CatVenueInfo: Codable {
     let id: String
     let name: String
+    let location: CatLocationInfo
+    let categories: [CatCategoryInfo]
+}
+
+struct CatLocationInfo: Codable {
+    let formattedAddress: [String]
+    let lat: Double
+    let lng: Double
+}
+
+struct CatCategoryInfo: Codable {
+    let id: String
+    let name: String
+    
 }
