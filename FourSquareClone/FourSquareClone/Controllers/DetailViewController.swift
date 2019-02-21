@@ -23,7 +23,7 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tips", style: .plain, target: self, action: #selector(tipsPressed))
     }
     private func getDetails() {
-        APIClient.getVenueDetail(keyword: self.venueName!, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
+        APIClient.getVenueDetail(keyword: self.venueName, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
             if let error = error {
                 print(error)
             } else if let detail = detail {
@@ -34,7 +34,12 @@ class DetailViewController: UIViewController {
     }
     private func setUpDetails() {
         DispatchQueue.main.async {
+            var catArray = [String]()
+            for i in self.venueDetail.categories {
+                catArray.append(i.name)
+            }
             self.detailVC.titleLabel.text = self.venueDetail.name
+            self.detailVC.categoryLabel.text = catArray.joined(separator: ", .")
         }
     }
     @objc private func mapSegue(){
