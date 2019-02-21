@@ -61,10 +61,11 @@ struct SingleCategory: Codable {
 struct SingleVenuePhotos: Codable {
     let prefix: String?
     let suffix: String?
+    let groups: [PhotoGroup]
 }
 
 struct PhotoGroup: Codable {
-    let items: [PhotoItem]?
+    let items: [PhotoItem]
 }
 
 struct PhotoItem: Codable {
