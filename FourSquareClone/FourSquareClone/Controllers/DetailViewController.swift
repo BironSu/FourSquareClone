@@ -20,6 +20,7 @@ class DetailViewController: UIViewController {
         detailVC.directionButton.addTarget(self, action: #selector(mapSegue), for: .touchUpInside)
         detailVC.favoriteButton.addTarget(self, action: #selector(favoriteSegue), for: .touchUpInside)
         getDetails()
+      
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tips", style: .plain, target: self, action: #selector(tipsPressed))
     }
     private func getDetails() {
@@ -29,6 +30,7 @@ class DetailViewController: UIViewController {
                 }
                 else if let detail = detail {
                     self.venueDetail = detail.response.venue
+                    self.setUpDetails()
                 }
             }
         }

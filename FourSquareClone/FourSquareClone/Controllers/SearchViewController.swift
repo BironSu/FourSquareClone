@@ -142,7 +142,7 @@ extension SearchViewController: UISearchBarDelegate {
                 if let error = error {
                     print(error)
                 } else if let cat = cat?.response.venues {
-                    self.buttonSearch = false
+                    self.buttonSearch = true
                     self.searchQueryData = cat
                 }
             }
