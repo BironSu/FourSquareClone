@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     var long: Double!
     var venueDetail: SingleVenueInfo!
     let detailVC = DetailView()
+    var keyword = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(detailVC)
@@ -23,13 +24,17 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tips", style: .plain, target: self, action: #selector(tipsPressed))
     }
     private func getDetails() {
-            APIClient.getVenueDetail(keyword: self.venueName, lat: self.lat, lon: self.long) { (detail, error) in
-                if let error = error {
-                    print(error)
-                }
-                else if let detail = detail {
-                    self.venueDetail = detail.response.venue
-                }
+        if let catID = cat?.venue.id {
+            keyword = catID
+        } else if let queryID = query?.id {
+            keyword = queryID
+        }
+        APIClient.getVenueDetail(keyword: keyword, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
+            if let error = error {
+                print(error)
+            } else if let detail = detail {
+                self.venueDetail = detail
+                self.setUpDetails()
             }
         }
     private func setUpDetails() {

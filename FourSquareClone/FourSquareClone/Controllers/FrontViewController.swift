@@ -7,13 +7,29 @@
 //
 
 import UIKit
+import CoreLocation
 
 class FrontViewController: UIViewController {
     let frontView = FrontView()
+    var locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(frontView)
         buttonSetup()
+        locationSetup()
+    }
+    private func locationSetup() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+            
+            
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+            
+        }
     }
     private func buttonSetup() {
         frontView.mainSearchButton.addTarget(self, action: #selector(searchFunction(_:)), for: .touchUpInside)
