@@ -26,6 +26,7 @@
 		09EF30F8221CA2EA00DF1222 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF30F7221CA2EA00DF1222 /* TipsView.swift */; };
 		09EF30FA221CA3D100DF1222 /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF30F9221CA3D100DF1222 /* TipTableViewCell.swift */; };
 		09EF30FC221CA53000DF1222 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF30FB221CA53000DF1222 /* TipsViewController.swift */; };
+		2B7EA96E221F37ED006CCAAB /* SavedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EA96D221F37ED006CCAAB /* SavedList.swift */; };
 		93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132C2220DF33B003A7516 /* AppDelegate.swift */; };
 		93D132CA220DF33C003A7516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D132C9220DF33C003A7516 /* Assets.xcassets */; };
 		93D132CD220DF33C003A7516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D132CB220DF33C003A7516 /* LaunchScreen.storyboard */; };
@@ -73,6 +74,7 @@
 		09EF30F7221CA2EA00DF1222 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		09EF30F9221CA3D100DF1222 /* TipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
 		09EF30FB221CA53000DF1222 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		2B7EA96D221F37ED006CCAAB /* SavedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedList.swift; sourceTree = "<group>"; };
 		93D132BF220DF33B003A7516 /* FourSquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D132C2220DF33B003A7516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D132C9220DF33C003A7516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				0904E3B02217594800B4066E /* NearByModel.swift */,
 				0904E3B222175EF300B4066E /* VenueDetailModel.swift */,
 				0904E3B4221765C800B4066E /* SavedVenueModel.swift */,
+				2B7EA96D221F37ED006CCAAB /* SavedList.swift */,
 				014CA10E221C94FC002A3C0E /* CategoryModel.swift */,
 				0992F862221DE82A00322D74 /* Category.swift */,
 
@@ -361,6 +364,7 @@
 				0992F863221DE82A00322D74 /* Category.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,
 				93D132E6220DF80B003A7516 /* String+DateExtensions.swift in Sources */,
+				2B7EA96E221F37ED006CCAAB /* SavedList.swift in Sources */,
 				93D132ED220E1F74003A7516 /* ListViewController.swift in Sources */,
 				93E4BB8C221DF7E900A67A4E /* QueryModel.swift in Sources */,
 				93D13303220E2549003A7516 /* MapView.swift in Sources */,
