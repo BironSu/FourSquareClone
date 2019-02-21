@@ -32,8 +32,9 @@ class DetailViewController: UIViewController {
                     self.venueDetail = detail.response.venue
                     self.setUpDetails()
                 }
-            }
-        }
+
+    }
+    }
     private func setUpDetails() {
         DispatchQueue.main.async {
             self.detailVC.titleLabel.text = self.venueDetail.name
@@ -56,3 +57,4 @@ class DetailViewController: UIViewController {
         navigationController?.pushViewController(tipVC, animated: true)
     }
 }
+

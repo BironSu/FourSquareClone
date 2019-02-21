@@ -2,13 +2,14 @@
 //  APIKeys.swift
 //  FourSquareClone
 //
-//  Created by Biron Su on 2/8/19.
+//  Created by Oniel Rosario on 2/21/19.
 //  Copyright © 2019 Pursuit. All rights reserved.
 //
 
 import Foundation
 
+
 class APIKey {
-    static let key = "NLD0T2XLI3UPE2A2IAD02PNWUKJ24COCJOD0M3MHFPMW0WWU"
-    static let secretKey = "I5FIJVSGIPQMFMV4KOKJXRK0I1DAYLNBYJY4IPM22UGVSG5Y"
+    static let key = "B5KVOEOESFYWIZGGFNNOZ4GCVSH4GEO1MXBKPYW0F35BKS2O"
+    static let secretKey = "NIUZUC5M3Z0SU3D35LG1DNJZN2NYZK3QGD5P20VSSAIH5QEH"
 }

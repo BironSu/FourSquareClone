@@ -14,6 +14,7 @@
 		0904E3B322175EF300B4066E /* VenueDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B222175EF300B4066E /* VenueDetailModel.swift */; };
 		0904E3B5221765C800B4066E /* SavedVenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B4221765C800B4066E /* SavedVenueModel.swift */; };
 		0904E3B72217723A00B4066E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B62217723A00B4066E /* MapViewController.swift */; };
+		09781846221F50FB00510D70 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09781845221F50FB00510D70 /* APIKeys.swift */; };
 		0992F863221DE82A00322D74 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992F862221DE82A00322D74 /* Category.swift */; };
 		0992F866221DFF1800322D74 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992F865221DFF1800322D74 /* LocationService.swift */; };
 		099800202216221500EBAEA2 /* CollectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */; };
@@ -29,7 +30,6 @@
 		93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132C2220DF33B003A7516 /* AppDelegate.swift */; };
 		93D132CA220DF33C003A7516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D132C9220DF33C003A7516 /* Assets.xcassets */; };
 		93D132CD220DF33C003A7516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D132CB220DF33C003A7516 /* LaunchScreen.storyboard */; };
-		93D132D5220DF5CC003A7516 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132D4220DF5CC003A7516 /* APIKeys.swift */; };
 		93D132DD220DF7BF003A7516 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132DC220DF7BF003A7516 /* AppError.swift */; };
 		93D132DF220DF7C8003A7516 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132DE220DF7C8003A7516 /* ImageHelper.swift */; };
 		93D132E1220DF7D1003A7516 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132E0220DF7D1003A7516 /* NetworkHelper.swift */; };
@@ -61,6 +61,7 @@
 		0904E3B222175EF300B4066E /* VenueDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailModel.swift; sourceTree = "<group>"; };
 		0904E3B4221765C800B4066E /* SavedVenueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVenueModel.swift; sourceTree = "<group>"; };
 		0904E3B62217723A00B4066E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		09781845221F50FB00510D70 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		0992F862221DE82A00322D74 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0992F865221DFF1800322D74 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		93D132C9220DF33C003A7516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93D132CC220DF33C003A7516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93D132CE220DF33C003A7516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93D132D4220DF5CC003A7516 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		93D132DC220DF7BF003A7516 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		93D132DE220DF7C8003A7516 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		93D132E0220DF7D1003A7516 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
@@ -213,16 +213,13 @@
 		93D132D9220DF6DC003A7516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				93D132D4220DF5CC003A7516 /* APIKeys.swift */,
+				09781845221F50FB00510D70 /* APIKeys.swift */,
 				0904E3AE221756F500B4066E /* Photo.swift */,
 				014CA10C221C717A002A3C0E /* APIClient.swift */,
 				0904E3B02217594800B4066E /* NearByModel.swift */,
 				0904E3B222175EF300B4066E /* VenueDetailModel.swift */,
 				0904E3B4221765C800B4066E /* SavedVenueModel.swift */,
 				014CA10E221C94FC002A3C0E /* CategoryModel.swift */,
-				0992F862221DE82A00322D74 /* Category.swift */,
-
-				93E4BB8B221DF7E900A67A4E /* QueryModel.swift */,
 				93E4BB8B221DF7E900A67A4E /* QueryModel.swift */,
 				0992F862221DE82A00322D74 /* Category.swift */,
 			);
@@ -328,7 +325,6 @@
 			files = (
 				0904E3AF221756F500B4066E /* Photo.swift in Sources */,
 				09980024221622A100EBAEA2 /* CollectionListView.swift in Sources */,
-				93D132D5220DF5CC003A7516 /* APIKeys.swift in Sources */,
 				09EF30FA221CA3D100DF1222 /* TipTableViewCell.swift in Sources */,
 				93D132FF220E21D0003A7516 /* DetailView.swift in Sources */,
 				0992F866221DFF1800322D74 /* LocationService.swift in Sources */,
@@ -357,6 +353,7 @@
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
 				014CA10F221C94FC002A3C0E /* CategoryModel.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
+				09781846221F50FB00510D70 /* APIKeys.swift in Sources */,
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
 				0992F863221DE82A00322D74 /* Category.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,
