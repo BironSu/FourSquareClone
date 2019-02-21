@@ -14,6 +14,7 @@ class DetailViewController: UIViewController {
     var query: CatQuery?
     var venueDetail: VenueDetail?
     let detailVC = DetailView()
+    var keyword = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(detailVC)
@@ -25,27 +26,19 @@ class DetailViewController: UIViewController {
        
     }
     private func getDetails() {
-        if let catID = cat?.venue?.id {
-            APIClient.getVenueDetail(keyword: catID, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
-                if let error = error {
-                    print(error)
-                }
-                if let detail = detail {
-                    self.venueDetail = detail
-                    self.setUpDetails()
-                }
-            }
+        if let catID = cat?.venue.id {
+            keyword = catID
         } else if let queryID = query?.id {
-            APIClient.getVenueDetail(keyword: queryID, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
-                if let error = error {
-                    print(error)
-                } else if let detail = detail {
-                    self.venueDetail = detail
-                    self.setUpDetails()
-
-                }
+            keyword = queryID
+        }
+        APIClient.getVenueDetail(keyword: keyword, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
+            if let error = error {
+                print(error)
+            } else if let detail = detail {
+                self.venueDetail = detail
+                self.setUpDetails()
+                
             }
-            
         }
     }
     private func setUpDetails() {

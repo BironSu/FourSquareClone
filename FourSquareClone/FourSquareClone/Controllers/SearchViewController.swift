@@ -58,7 +58,7 @@ class SearchViewController: UIViewController {
             searchKey = "4d4b7105d754a06378d81259"
         }
         APIClient.getVenuesByCategory(categoryID: searchKey, lat: 40.69779079038551, lon: -73.9916819489333) { (cat, error) in
-            if let cat = cat?.response?.group?.results {
+            if let cat = cat?.response.group.results {
                 self.tihs = cat
             }
             if let error = error {
@@ -95,7 +95,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchCell", for: indexPath)
         if buttonSearch {
             let cellToSet = tihs[indexPath.row]
-            cell.textLabel?.text = cellToSet.venue?.name
+            cell.textLabel?.text = cellToSet.venue.name
         } else {
             let cellToSet = searchQueryData[indexPath.row]
             cell.textLabel?.text = cellToSet.name
