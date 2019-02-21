@@ -22,6 +22,11 @@ struct CatGroup: Codable {
 
 struct CatResult: Codable {
     let venue: CatVenueInfo
+    let photo: CatPhoto?
+}
+struct CatPhoto: Codable {
+    let prefix: String
+    let suffix: String
 }
 struct CatVenueInfo: Codable {
     let id: String

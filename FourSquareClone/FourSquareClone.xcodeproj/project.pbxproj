@@ -14,6 +14,8 @@
 		0904E3B322175EF300B4066E /* VenueDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B222175EF300B4066E /* VenueDetailModel.swift */; };
 		0904E3B5221765C800B4066E /* SavedVenueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B4221765C800B4066E /* SavedVenueModel.swift */; };
 		0904E3B72217723A00B4066E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904E3B62217723A00B4066E /* MapViewController.swift */; };
+		09781846221F50FB00510D70 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09781845221F50FB00510D70 /* APIKeys.swift */; };
+		09781848221F616300510D70 /* NewPhotoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09781847221F616300510D70 /* NewPhotoTest.swift */; };
 		0992F863221DE82A00322D74 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992F862221DE82A00322D74 /* Category.swift */; };
 		0992F866221DFF1800322D74 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992F865221DFF1800322D74 /* LocationService.swift */; };
 		099800202216221500EBAEA2 /* CollectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */; };
@@ -61,6 +63,8 @@
 		0904E3B222175EF300B4066E /* VenueDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailModel.swift; sourceTree = "<group>"; };
 		0904E3B4221765C800B4066E /* SavedVenueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedVenueModel.swift; sourceTree = "<group>"; };
 		0904E3B62217723A00B4066E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		09781845221F50FB00510D70 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		09781847221F616300510D70 /* NewPhotoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPhotoTest.swift; sourceTree = "<group>"; };
 		0992F862221DE82A00322D74 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0992F865221DFF1800322D74 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
@@ -213,8 +217,13 @@
 		93D132D9220DF6DC003A7516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				9371A85D221F596D0049439E /* APIKeys.swift */,
+=======
+				09781845221F50FB00510D70 /* APIKeys.swift */,
+>>>>>>> b7727a36450b0c4a9733d45d978f9d32cc41a054
 				0904E3AE221756F500B4066E /* Photo.swift */,
+				09781847221F616300510D70 /* NewPhotoTest.swift */,
 				014CA10C221C717A002A3C0E /* APIClient.swift */,
 				0904E3B02217594800B4066E /* NearByModel.swift */,
 				0904E3B222175EF300B4066E /* VenueDetailModel.swift */,
@@ -349,11 +358,16 @@
 				09EF30FC221CA53000DF1222 /* TipsViewController.swift in Sources */,
 				099800282216245000EBAEA2 /* CreateViewController.swift in Sources */,
 				0904E3B12217594800B4066E /* NearByModel.swift in Sources */,
+				09781848221F616300510D70 /* NewPhotoTest.swift in Sources */,
 				09EF30F8221CA2EA00DF1222 /* TipsView.swift in Sources */,
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
 				014CA10F221C94FC002A3C0E /* CategoryModel.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
+<<<<<<< HEAD
 				9371A85E221F596D0049439E /* APIKeys.swift in Sources */,
+=======
+				09781846221F50FB00510D70 /* APIKeys.swift in Sources */,
+>>>>>>> b7727a36450b0c4a9733d45d978f9d32cc41a054
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
 				0992F863221DE82A00322D74 /* Category.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,

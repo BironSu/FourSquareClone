@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tips", style: .plain, target: self, action: #selector(tipsPressed))
     }
     private func getDetails() {
+<<<<<<< HEAD
         APIClient.getVenueDetail(keyword: self.venueName, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
             if let error = error {
                 print(error)
@@ -31,6 +32,17 @@ class DetailViewController: UIViewController {
                 self.setUpDetails()
             }
         }
+=======
+            APIClient.getVenueDetail(keyword: self.venueName, lat: self.lat, lon: self.long) { (detail, error) in
+                if let error = error {
+                    print(error)
+                }
+                else if let detail = detail {
+                    self.venueDetail = detail.response.venue
+                    self.setUpDetails()
+                }
+    }
+>>>>>>> b7727a36450b0c4a9733d45d978f9d32cc41a054
     }
     private func setUpDetails() {
         DispatchQueue.main.async {
@@ -39,7 +51,30 @@ class DetailViewController: UIViewController {
                 catArray.append(i.name)
             }
             self.detailVC.titleLabel.text = self.venueDetail.name
+<<<<<<< HEAD
             self.detailVC.categoryLabel.text = catArray.joined(separator: ", .")
+=======
+            self.detailVC.addressLabel.text = self.venueDetail.location.address ?? "No Address"
+            let photos = self.venueDetail.photos.groups
+            let groups = photos[photos.count - 1].items
+            let id = groups[groups.count - 1].id
+            APIClient.getImage(id: id, completionHandler: { (image, error) in
+                if let error = error {
+                    print(error)
+                } else if let image = image {
+                    let prefix = image.response.photo.prefix
+                    let suffix = image.response.photo.suffix
+                  let photoString = prefix + "original" + suffix
+                    ImageHelper.fetchImageFromNetwork(urlString: photoString, completion: { (error, image) in
+                        if let error = error {
+                            print(error)
+                        } else if let image = image {
+                            self.detailVC.detailImage.image = image
+                        }
+                    })
+                }
+            })
+>>>>>>> b7727a36450b0c4a9733d45d978f9d32cc41a054
         }
     }
     @objc private func mapSegue(){
