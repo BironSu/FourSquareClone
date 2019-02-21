@@ -10,7 +10,6 @@ import UIKit
 import CoreLocation
 
 class FrontViewController: UIViewController {
-    let tipView = TipsView()
     let frontView = FrontView()
     var locationManager = CLLocationManager()
     override func viewDidLoad() {
@@ -42,13 +41,17 @@ class FrontViewController: UIViewController {
         frontView.toDoButton.addTarget(self, action: #selector(searchFunction(_:)), for: .touchUpInside)
 
     }
-    @objc private func searchFunction(_ sender: UIButton){
-        if let currentTitle = sender.currentTitle {
-            let searchVC = SearchViewController()
-            searchVC.searchKey = currentTitle
+    @objc private func searchFunction(_ sender: UIButton) {
+         let searchVC = SearchViewController()
+        switch sender {
+        case frontView.mainSearchButton:
             searchVC.buttonSearch = true
+            searchVC.searchKey = "coffee"
+            navigationController?.pushViewController(searchVC, animated: true)
+        default:
+          searchVC.buttonSearch = false
+          searchVC.searchKey = sender.title(for: .normal)!
             navigationController?.pushViewController(searchVC, animated: true)
         }
     }
-
 }

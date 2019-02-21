@@ -26,4 +26,18 @@ struct CatResult: Codable {
 struct CatVenueInfo: Codable {
     let id: String
     let name: String
+    let location: CatLocationInfo
+    let categories: [CatCategoryInfo]
+}
+
+struct CatLocationInfo: Codable {
+    let formattedAddress: [String]
+    let lat: Double
+    let lng: Double
+}
+
+struct CatCategoryInfo: Codable {
+    let id: String
+    let name: String
+    
 }
