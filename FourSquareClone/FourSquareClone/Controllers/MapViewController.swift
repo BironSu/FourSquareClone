@@ -37,6 +37,19 @@ class MapViewController: UIViewController {
         mapView.mapView.showAnnotations([annotation], animated: true)
         mapView.mapView.setRegion(region, animated: true)
     }
+    
+    private func openMap() {
+        let location = venueLocation.location
+        let coordinate = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng)
+        let placemark = MKPlacemark(coordinate: coordinate)
+//        let region = MKCoordinateRegion(center: coordinate, latitudinalMeters: 1600, longitudinalMeters: 1600)
+        let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: coordinate)]
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.openInMaps(launchOptions: options)
+    }
 }
 extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        openMap()
+    }
 }
