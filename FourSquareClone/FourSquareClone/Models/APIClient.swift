@@ -79,7 +79,7 @@ final class APIClient {
     }
     
     static func getImage(id: String, completionHandler: @escaping(NewPhotoTest?, AppError?) -> Void) {
-        guard let url = URL.init(string: "https://api.foursquare.com/v2/photos/\(id)?ll=40.69779079038551,-73.9916819489333&client_id=B5KVOEOESFYWIZGGFNNOZ4GCVSH4GEO1MXBKPYW0F35BKS2O&client_secret=NIUZUC5M3Z0SU3D35LG1DNJZN2NYZK3QGD5P20VSSAIH5QEH&v=20190221") else {
+        guard let url = URL.init(string: "https://api.foursquare.com/v2/photos/\(id)?ll=40.69779079038551,-73.9916819489333&client_id=\(APIKey.key)&client_secret=\(APIKey.secretKey)&v=20190221") else {
             print(AppError.badURL("no url"))
             return }
         URLSession.shared.dataTask(with: url) { (image, response, error) in
