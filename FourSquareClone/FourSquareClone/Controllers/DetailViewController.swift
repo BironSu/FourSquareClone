@@ -9,55 +9,38 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
-    var cat: CatResult?
-    var query: CatQuery?
-    var venueDetail: VenueDetail?
+    var venueName: String!
+    var lat: Double!
+    var long: Double!
+    var venueDetail: SingleVenueInfo!
     let detailVC = DetailView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(detailVC)
-        
         detailVC.directionButton.addTarget(self, action: #selector(mapSegue), for: .touchUpInside)
         detailVC.favoriteButton.addTarget(self, action: #selector(favoriteSegue), for: .touchUpInside)
         getDetails()
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tips", style: .plain, target: self, action: #selector(tipsPressed))
-       
     }
     private func getDetails() {
-        if let catID = cat?.venue?.id {
-            APIClient.getVenueDetail(keyword: catID, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
+            APIClient.getVenueDetail(keyword: self.venueName, lat: self.lat, lon: self.long) { (detail, error) in
                 if let error = error {
                     print(error)
                 }
-                if let detail = detail {
-                    self.venueDetail = detail
-                    self.setUpDetails()
+                else if let detail = detail {
+                    self.venueDetail = detail.response.venue
                 }
             }
-        } else if let queryID = query?.id {
-            APIClient.getVenueDetail(keyword: queryID, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
-                if let error = error {
-                    print(error)
-                } else if let detail = detail {
-                    self.venueDetail = detail
-                    self.setUpDetails()
-
-                }
-            }
-            
         }
-    }
     private func setUpDetails() {
         DispatchQueue.main.async {
-            self.detailVC.titleLabel.text = self.venueDetail?.response.venue.name
+            self.detailVC.titleLabel.text = self.venueDetail.name
         }
-        
     }
     @objc private func mapSegue(){
         let vc = MapViewController()
+        vc.venueLocation = venueDetail
         navigationController?.pushViewController(vc, animated: true)
-        
     }
 
     @objc private func favoriteSegue() {

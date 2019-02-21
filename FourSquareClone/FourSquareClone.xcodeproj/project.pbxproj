@@ -220,6 +220,9 @@
 				0904E3B222175EF300B4066E /* VenueDetailModel.swift */,
 				0904E3B4221765C800B4066E /* SavedVenueModel.swift */,
 				014CA10E221C94FC002A3C0E /* CategoryModel.swift */,
+				0992F862221DE82A00322D74 /* Category.swift */,
+
+				93E4BB8B221DF7E900A67A4E /* QueryModel.swift */,
 				93E4BB8B221DF7E900A67A4E /* QueryModel.swift */,
 				0992F862221DE82A00322D74 /* Category.swift */,
 			);

@@ -22,23 +22,21 @@ struct SingleVenueInfo: Codable {
     let id: String
     let name: String
     let contact: Contact
-    //location goes here
-    let categories: [SingleCategory]
-    let bestPhoto: SingleVenuePhotos?
-    let location: LocationInformation?
-    let categories: SingleCategory
-    let photo: SingleVenuePhotos
-    let hours: Hour
-
+    let location: LocationInformation
+   let categories: [SingleCategory]
+    let photos: SingleVenuePhotos
+//   let bestPhoto: SingleVenuePhotos
 }
 
+
+
 struct LocationInformation: Codable {
-    let address: String
+    let address: String?
     let crossStreet: String?
     let lat: Double
     let lng: Double
     let distance: Int
-    let postalCode: String
+    let postalCode: String?
     let cc: String
     let city: String
     let state: String
@@ -48,8 +46,8 @@ struct LocationInformation: Codable {
 
 
 struct Contact: Codable {
-    let phone: String
-    let formattedPhone: String
+    let phone: String?
+    let formattedPhone: String?
     
 }
 
@@ -61,8 +59,8 @@ struct SingleCategory: Codable {
 }
 
 struct SingleVenuePhotos: Codable {
-    let prefix: String
-    let suffix: String
+    let prefix: String?
+    let suffix: String?
 }
 
 struct PhotoGroup: Codable {

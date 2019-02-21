@@ -17,4 +17,12 @@ struct QueryResponse: Codable {
 struct CatQuery: Codable {
     let id: String
     let name: String
+    let location: QueryLocation
+}
+
+struct QueryLocation: Codable {
+    let address: String
+    let crossStreet: String
+    let lat: Double
+    let lng:Double
 }
