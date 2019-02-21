@@ -59,7 +59,6 @@ final class APIClient {
     }
     static func getVenueDetail(keyword: String, lat: Double, lon: Double, completionHandler: @escaping ((VenueDetail?, AppError?) -> Void)) {
         let date = Date.getISOTimestamp().formatISODateString(dateFormat: "yyyyMMdd")
-        let thing = "https://api.foursquare.com/v2/venues/\(keyword)?ll=\(lat),\(lon)&client_id=\(APIKey.key)&client_secret=\(APIKey.secretKey)&v=\(date)"
         guard let url = URL.init(string: "https://api.foursquare.com/v2/venues/\(keyword)?ll=\(lat),\(lon)&client_id=\(APIKey.key)&client_secret=\(APIKey.secretKey)&v=\(date)") else { completionHandler(nil, .badURL("url not working"))
             return }
         print(url)

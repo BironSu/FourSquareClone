@@ -21,8 +21,8 @@ struct CatQuery: Codable {
 }
 
 struct QueryLocation: Codable {
-    let address: String
-    let crossStreet: String
+    let address: String?
+    let crossStreet: String?
     let lat: Double
     let lng:Double
 }

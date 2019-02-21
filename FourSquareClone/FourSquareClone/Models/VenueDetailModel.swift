@@ -23,7 +23,7 @@ struct SingleVenueInfo: Codable {
     let name: String
     let contact: Contact
     let location: LocationInformation
-   let categories: [SingleCategory]
+    let categories: [SingleCategory]
     let photos: SingleVenuePhotos
 //   let bestPhoto: SingleVenuePhotos
 }
