@@ -12,7 +12,7 @@ import Foundation
 struct SavedList: Codable {
     let name: String
     let id : String
-    let folderName: String
+    let folderName: String?
     let lat: Double
     let long: Double
 }
