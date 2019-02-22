@@ -32,7 +32,7 @@ class DetailViewController: UIViewController {
                 self.setUpDetails()
             }
         }
-            APIClient.getVenueDetail(keyword: self.venueName, lat: self.lat, lon: self.long) { (detail, error) in
+            APIClient.getVenueDetail(keyword: self.venueName, lat: 40.69779079038551, lon: -73.991681948933) { (detail, error) in
                 if let error = error {
                     print(error)
                 }
