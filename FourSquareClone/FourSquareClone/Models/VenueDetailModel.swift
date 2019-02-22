@@ -26,9 +26,20 @@ struct SingleVenueInfo: Codable {
     let categories: [SingleCategory]
     let photos: SingleVenuePhotos
 //   let bestPhoto: SingleVenuePhotos
+    let tips: SingleVenueTips
 }
 
+struct SingleVenueTips: Codable {
+    let groups: [SingleTipsGroups]
+}
 
+struct SingleTipsGroups: Codable {
+    let items: [SingleVenueTipID]
+}
+
+struct SingleVenueTipID: Codable {
+    let id: String
+}
 
 struct LocationInformation: Codable {
     let address: String?

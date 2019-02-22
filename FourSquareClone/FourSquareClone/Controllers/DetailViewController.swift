@@ -74,6 +74,17 @@ class DetailViewController: UIViewController {
     
     @objc private func tipsPressed() {
         let tipVC = TipsViewController()
+        let venue = venueDetail.tips.groups
+        let venueTips = venue[venue.count - 1].items
+        guard venueTips.count > 0 else { return }
+        let tipID = venueTips[venueTips.count - 1].id
+        APIClient.getTips(id: tipID) { (tips, error) in
+            if let error = error {
+                print(error)
+            } else if let tips = tips {
+               tipVC.tipsList.append(tips)
+            }
+        }
         navigationController?.pushViewController(tipVC, animated: true)
     }
 }
