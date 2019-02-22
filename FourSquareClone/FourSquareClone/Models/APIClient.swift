@@ -95,6 +95,24 @@ final class APIClient {
             }
         }.resume()
     }
+    
+    static func getTips(id: String, completionHandler: @escaping(Tip?, AppError?) -> Void) {
+        guard let url = URL.init(string: "https://api.foursquare.com/v2/tips/\(id)?client_id=\(APIKey.key)&client_secret=\(APIKey.secretKey)&v=20190220") else { print(AppError.badURL("bad url"))
+            return
+        }
+        URLSession.shared.dataTask(with: url) { (tip, response, error) in
+            if let error = error {
+                completionHandler(nil, AppError.badURL("\(error)"))
+            } else if let tip = tip {
+                do {
+                    let data = try JSONDecoder().decode(TipID.self, from: tip)
+                    completionHandler(data.response.tip, nil)
+                } catch {
+                    completionHandler(nil, AppError.jsonDecodingError(error))
+                }
+            }
+        }.resume()
+    }
 }
 
 

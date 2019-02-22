@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol DetailFavoriteSavedDelegate: AnyObject {
+    func addToFavorites(venueName: String, venueID: String)
+}
+
 class DetailViewController: UIViewController {
+    weak var delegate: DetailFavoriteSavedDelegate?
     var venueName: String!
     var lat: Double!
     var long: Double!
@@ -58,7 +63,9 @@ class DetailViewController: UIViewController {
             self.detailVC.addressLabel.text = addressArray.joined(separator: "\n")
 
             let photos = self.venueDetail.photos.groups
+            guard photos.count > 0 else { return }
             let groups = photos[photos.count - 1].items
+            guard groups.count > 0 else { return }
             let id = groups[groups.count - 1].id
             APIClient.getImage(id: id, completionHandler: { (image, error) in
                 if let error = error {
@@ -85,13 +92,29 @@ class DetailViewController: UIViewController {
     }
 
     @objc private func favoriteSegue() {
+        delegate?.addToFavorites(venueName: venueDetail.name, venueID: venueName)
         let vc = CollectionListController()
+        vc.venue = venueDetail.name
+        vc.id = venueName
+        vc.lat = venueDetail.location.lat
+        vc.long = venueDetail.location.lng
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true, completion: nil)
     }
     
     @objc private func tipsPressed() {
         let tipVC = TipsViewController()
+        let venue = venueDetail.tips.groups
+        let venueTips = venue[venue.count - 1].items
+        guard venueTips.count > 0 else { return }
+        let tipID = venueTips[venueTips.count - 1].id
+        APIClient.getTips(id: tipID) { (tips, error) in
+            if let error = error {
+                print(error)
+            } else if let tips = tips {
+               tipVC.tipsList.append(tips)
+            }
+        }
         navigationController?.pushViewController(tipVC, animated: true)
     }
 }

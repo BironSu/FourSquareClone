@@ -10,7 +10,13 @@ import UIKit
 
 class TipsViewController: UIViewController {
     let tipsView = TipsView()
-    
+    var tipsList = [Tip]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tipsView.tipsTableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +28,14 @@ class TipsViewController: UIViewController {
 
 extension TipsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return tipsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell", for: indexPath) as? TipTableViewCell else { return UITableViewCell() }
-        cell.textLabel?.text = indexPath.row.description
-        
+        let tip = tipsList[indexPath.row]
+        cell.textLabel?.numberOfLines = 6
+        cell.textLabel?.text = tip.text
         return cell
     }
 }
