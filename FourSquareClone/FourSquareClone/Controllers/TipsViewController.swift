@@ -23,10 +23,7 @@ class TipsViewController: UIViewController {
     view.addSubview(tipsView)
     self.tipsView.tipsTableView.dataSource = self
     self.tipsView.tipsTableView.delegate = self
-     
     }
-    
-
 }
 
 extension TipsViewController: UITableViewDataSource {

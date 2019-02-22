@@ -26,6 +26,9 @@ class SearchViewController: UIViewController {
         }
     }
     var singleVenueToSend: SingleVenueInfo!
+    
+    
+    
     let searchView = SearchView()
     // search key holds the value of the button title sent from frontview VC
     var searchKey = ""
@@ -123,11 +126,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let vc = DetailViewController()
         if buttonSearch {
             let venue = searchQueryData[indexPath.row]
+            let venueHistory = SavedList.init(name: venue.name, id: venue.id)
+            SavedVenueModel.addList(list: venueHistory)
             vc.venueName = venue.id
             vc.lat = venue.location.lat
             vc.long = venue.location.lng
         } else {
             let venue = tihs[indexPath.row]
+            let venueHistory = SavedList.init(name: venue.venue.name, id: venue.venue.id)
+            SavedVenueModel.addList(list: venueHistory)
             vc.venueName = venue.venue.id
             vc.lat = venue.venue.location.lat
             vc.long = venue.venue.location.lng

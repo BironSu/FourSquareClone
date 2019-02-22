@@ -32,6 +32,7 @@
 		09EF30F8221CA2EA00DF1222 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF30F7221CA2EA00DF1222 /* TipsView.swift */; };
 		09EF30FA221CA3D100DF1222 /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF30F9221CA3D100DF1222 /* TipTableViewCell.swift */; };
 		09EF30FC221CA53000DF1222 /* TipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EF30FB221CA53000DF1222 /* TipsViewController.swift */; };
+		9371A85E221F596D0049439E /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9371A85D221F596D0049439E /* APIKeys.swift */; };
 		93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D132C2220DF33B003A7516 /* AppDelegate.swift */; };
 		93D132CA220DF33C003A7516 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D132C9220DF33C003A7516 /* Assets.xcassets */; };
 		93D132CD220DF33C003A7516 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D132CB220DF33C003A7516 /* LaunchScreen.storyboard */; };
@@ -84,6 +85,7 @@
 		09EF30F7221CA2EA00DF1222 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
 		09EF30F9221CA3D100DF1222 /* TipTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
 		09EF30FB221CA53000DF1222 /* TipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsViewController.swift; sourceTree = "<group>"; };
+		9371A85D221F596D0049439E /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		93D132BF220DF33B003A7516 /* FourSquareClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FourSquareClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D132C2220DF33B003A7516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D132C9220DF33C003A7516 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -223,8 +225,9 @@
 		93D132D9220DF6DC003A7516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				09781845221F50FB00510D70 /* APIKeys.swift */,
+
 				09240AE8221FB202009E8E6D /* TipID.swift */,
+				9371A85D221F596D0049439E /* APIKeys.swift */,
 				0904E3AE221756F500B4066E /* Photo.swift */,
 				09781847221F616300510D70 /* NewPhotoTest.swift */,
 				014CA10C221C717A002A3C0E /* APIClient.swift */,
@@ -373,7 +376,8 @@
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
 				014CA10F221C94FC002A3C0E /* CategoryModel.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
-				09781846221F50FB00510D70 /* APIKeys.swift in Sources */,
+				9371A85E221F596D0049439E /* APIKeys.swift in Sources */,
+
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
 				0992F863221DE82A00322D74 /* Category.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,
