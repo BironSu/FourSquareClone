@@ -4,11 +4,11 @@
 
 Using the FourSquare API to load list of categories of venues in a collection view
 
-- The user is able to clich on the search button which segues to a search bar that allows the user to search of a venue
-- The user is able to select a venue from different categories to view its venue
+- The user is able to click on the search button which segues to a search bar that allows the user to search for a venue
+- The user is able to select a venue from different categories 
 - Selecting a venue category segues to a table view of venues
 - Selecting a table view cell segues to a detail view where the user can see more information about the venue such as the venue's image, name, address, direction and favorite button which allows the user to favorite a venue
-- Selecting on the venue's direction segues to a detail view of the venue's map view annotations.
+- Selecting on the venue's direction segues to the venue's map view annotations.
 - Clicking on the map view annotation gives you a google MKLocation direction
 
 # Detailed Outline
