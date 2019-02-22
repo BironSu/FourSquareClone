@@ -23,6 +23,15 @@ class DetailViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Tips", style: .plain, target: self, action: #selector(tipsPressed))
     }
     private func getDetails() {
+
+        APIClient.getVenueDetail(keyword: self.venueName, lat: 40.69779079038551, lon: -73.9916819489333) { (detail, error) in
+            if let error = error {
+                print(error)
+            } else if let detail = detail {
+                self.venueDetail = detail.response.venue
+                self.setUpDetails()
+            }
+        }
             APIClient.getVenueDetail(keyword: self.venueName, lat: self.lat, lon: self.long) { (detail, error) in
                 if let error = error {
                     print(error)
@@ -35,8 +44,19 @@ class DetailViewController: UIViewController {
     }
     private func setUpDetails() {
         DispatchQueue.main.async {
+            var catArray = [String]()
+            var addressArray = [String]()
+            for i in self.venueDetail.categories {
+                catArray.append(i.name)
+            }
+            for i in self.venueDetail.location.formattedAddress {
+                addressArray.append(i)
+            }
             self.detailVC.titleLabel.text = self.venueDetail.name
-            self.detailVC.addressLabel.text = self.venueDetail.location.address ?? "No Address"
+
+            self.detailVC.categoryLabel.text = catArray.joined(separator: ", ")
+            self.detailVC.addressLabel.text = addressArray.joined(separator: "\n")
+
             let photos = self.venueDetail.photos.groups
             let groups = photos[photos.count - 1].items
             let id = groups[groups.count - 1].id

@@ -21,6 +21,7 @@ class DetailView: UIView {
     lazy var detailImage: UIImageView = {
         let detailI = UIImageView()
         detailI.image = UIImage(named: "foursquarePH")
+        detailI.contentMode = .scaleAspectFit
         return detailI
     }()
     
@@ -57,6 +58,7 @@ class DetailView: UIView {
         categoryL.backgroundColor = .clear
         categoryL.textColor = .white
         categoryL.font = UIFont.boldSystemFont(ofSize: 18)
+        categoryL.numberOfLines = 0
         categoryL.text = "This is the Category Label"
         return categoryL
     }()
