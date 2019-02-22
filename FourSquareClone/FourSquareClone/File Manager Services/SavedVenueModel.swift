@@ -38,7 +38,8 @@ final class SavedVenueModel {
         if FileManager.default.fileExists(atPath: path) {
             if let data = FileManager.default.contents(atPath: path) {
                 do {
-                   folders = try PropertyListDecoder().decode([VenueFolder].self, from: data)
+                  let addedFolders = try PropertyListDecoder().decode(VenueFolder.self, from: data)
+                    folders.append(addedFolders)
                 } catch {
                     print("property list decoding error: \(error)")
                 }

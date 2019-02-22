@@ -12,5 +12,5 @@ import Foundation
 struct VenueFolder: Codable {
     let title: String
     let description: String
-    let venues: [SavedList]
+//    let venues: [SavedList]
 }
