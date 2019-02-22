@@ -22,6 +22,7 @@ class ListViewController: UIViewController {
         listView.listCollectionView.dataSource = self
         listView.listCollectionView.delegate = self
         listView.createListButton.addTarget(self, action: #selector(createFunc), for: .touchUpInside)
+        
     }
     
     
@@ -63,7 +64,13 @@ extension ListViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = SavedViewController()
-        print(indexPath.row)
+        
+        
+        
+        
+        
+        
+    
         navigationController?.pushViewController(vc, animated: true)
     }
 

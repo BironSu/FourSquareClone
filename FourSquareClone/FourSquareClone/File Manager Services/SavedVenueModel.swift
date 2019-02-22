@@ -17,8 +17,9 @@ final class SavedVenueModel {
     
     private static let venueFilename = "FourSquareClone.plist"
     private static let folderFilename = "FolderVenue.plist"
-    private static var lists = [SavedList]()
+    public static var lists = [SavedList]() 
     private static var venueFolders = [VenueFolder]()
+    
     static func saveFolder(venue: VenueFolder) -> (success: Bool, error: Error?) {
         var collectionVenues = getVenueFolders()
         collectionVenues.append(venue)
@@ -56,11 +57,14 @@ final class SavedVenueModel {
     
     
     static func getLists() -> [SavedList] {
+        var newVenues = [SavedList]()
         let path = DataPersistenceManager.filepathToDocumentsDirectory(filename: venueFilename).path
+        print(path)
         if FileManager.default.fileExists(atPath: path) {
             if let data = FileManager.default.contents(atPath: path) {
                 do {
-                    lists = try PropertyListDecoder().decode([SavedList].self, from: data)
+                  let newlists = try PropertyListDecoder().decode(SavedList.self, from: data)
+              newVenues.append(newlists)
                 } catch {
                     print("property list decoding error: \(error)")
                 }
@@ -70,31 +74,33 @@ final class SavedVenueModel {
         } else {
             print("\(venueFilename) does not exist")
         }
-        return lists
+        return newVenues
     }
     
-    static func addList(list: SavedList){
+    static func addList(list: SavedList) {
         lists.append(list)
-        save()
     }
     
     static func delete(list: SavedList, atIndex index: Int) {
         lists.remove(at: index)
-        save()
+        
     }
     
-    static func save() {
+    static func saveVenue(venue: SavedList) -> (success: Bool, error: Error?) {
+        var venues = getLists()
+        venues.append(venue)
         let path = DataPersistenceManager.filepathToDocumentsDirectory(filename: venueFilename)
         do {
-            let data = try PropertyListEncoder().encode(lists)
+            let data = try PropertyListEncoder().encode(venue)
             try data.write(to: path, options: Data.WritingOptions.atomic)
         } catch {
             print("property list encoding error: \(error)")
         }
+        return (true,nil)
     }
     
     static func updateList(updatedList: SavedList, atIndex index: Int) {
         lists[index] = updatedList
-        save()
+        
     }
 }

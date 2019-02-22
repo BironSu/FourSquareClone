@@ -12,4 +12,5 @@ import Foundation
 struct SavedList: Codable {
     let name: String
     let id : String
+    let folderName: String
 }

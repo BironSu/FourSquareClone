@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol DetailFavoriteSavedDelegate: AnyObject {
+    func addToFavorites(venueName: String, venueID: String)
+}
+
 class DetailViewController: UIViewController {
+    weak var delegate: DetailFavoriteSavedDelegate?
     var venueName: String!
     var lat: Double!
     var long: Double!
@@ -67,7 +72,10 @@ class DetailViewController: UIViewController {
     }
 
     @objc private func favoriteSegue() {
+        delegate?.addToFavorites(venueName: venueDetail.name, venueID: venueName)
         let vc = CollectionListController()
+        vc.venue = venueDetail.name
+        vc.id = venueName
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true, completion: nil)
     }

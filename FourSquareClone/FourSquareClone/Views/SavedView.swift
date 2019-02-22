@@ -12,7 +12,7 @@ class SavedView: UIView {
 
     lazy var savedTableView: UITableView = {
         let savedTV = UITableView()
-        savedTV.backgroundColor = .red
+        savedTV.backgroundColor = .lightGray
         return savedTV
     }()
     

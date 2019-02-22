@@ -18,6 +18,7 @@ class CreateViewController: UIViewController {
         createView.descriptionTextView.delegate = self
         createView.createButton.addTarget(self, action: #selector(createFunc), for: .touchUpInside)
         createView.dismissButton.addTarget(self, action: #selector(dismissFunc), for: .touchUpInside)
+    
     }
     // for background
     @objc private func dismissFunc() {
