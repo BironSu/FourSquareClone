@@ -21,6 +21,7 @@ class DetailView: UIView {
     lazy var detailImage: UIImageView = {
         let detailI = UIImageView()
         detailI.image = UIImage(named: "foursquarePH")
+        detailI.contentMode = .scaleAspectFit
         return detailI
     }()
     
@@ -57,6 +58,7 @@ class DetailView: UIView {
         categoryL.backgroundColor = .clear
         categoryL.textColor = .white
         categoryL.font = UIFont.boldSystemFont(ofSize: 18)
+        categoryL.numberOfLines = 0
         categoryL.text = "This is the Category Label"
         return categoryL
     }()
@@ -91,7 +93,7 @@ class DetailView: UIView {
         setupDetailImage()
         setupTitleLabel()
         setupAddressLabel()
-        setupHoursLabel()
+        //setupHoursLabel()
         setupCategoryLabel()
         setupDirectionButton()
         setupFavoriteButton()
@@ -157,8 +159,8 @@ extension DetailView {
         NSLayoutConstraint.activate([
             categoryLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             categoryLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            categoryLabel.heightAnchor.constraint(equalToConstant: 40),
-            categoryLabel.topAnchor.constraint(equalTo: hoursLabel.bottomAnchor, constant: 20)
+            categoryLabel.heightAnchor.constraint(equalToConstant: 80),
+            categoryLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 20)
             ])
     }
     private func setupDirectionButton() {

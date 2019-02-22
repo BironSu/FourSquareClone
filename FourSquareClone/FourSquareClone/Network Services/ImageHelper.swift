@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 final class ImageHelper {
     private init() {}
@@ -35,3 +36,5 @@ final class ImageHelper {
         return cache.object(forKey: urlString as NSString)
     }
 }
+
+

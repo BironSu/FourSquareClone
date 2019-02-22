@@ -15,6 +15,17 @@ class ListView: UIView {
         image.image = myimage
         return image
     }()
+   
+    lazy var placesLabel: UILabel = {
+        let titleL = UILabel()
+        titleL.text = "Your places"
+        titleL.textAlignment = .left
+//        titleL.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        titleL.font = UIFont.boldSystemFont(ofSize: 15)
+//        titleL.layer.cornerRadius = 15.0
+//        titleL.layer.masksToBounds = true
+        return titleL
+    }()
     
     
     lazy var createListButton: UIButton = {
@@ -32,9 +43,11 @@ class ListView: UIView {
     lazy var listCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize.init(width: 200, height: 200)
+//        layout.scrollDirection = .horizontal
         layout.sectionInset = UIEdgeInsets.init(top: 20, left: 10, bottom: 20, right: 10)
         let lcv = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         lcv.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: "ListCell")
+        lcv.showsHorizontalScrollIndicator = true
         lcv.backgroundColor = .clear
         return lcv
     }()
@@ -51,6 +64,7 @@ class ListView: UIView {
         setupbgImage()
         setConstraints()
         setButtonConstrains()
+//        setupLabels()
     }
     
     private func setupbgImage() {
@@ -61,6 +75,16 @@ class ListView: UIView {
         bgImage.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
         bgImage.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
     }
+    
+    func setupLabels() {
+        addSubview(placesLabel)
+        placesLabel.translatesAutoresizingMaskIntoConstraints = false
+        placesLabel.centerXAnchor.constraint(equalTo: createListButton.centerXAnchor).isActive = true
+        placesLabel.topAnchor.constraint(equalTo: createListButton.bottomAnchor, constant: 10).isActive = true
+        placesLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
+        
+    }
+
 
     
     

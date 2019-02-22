@@ -9,7 +9,11 @@
 import UIKit
 
 class SavedViewController: UIViewController {
-
+    var savedVenues = [SavedList]() {
+        didSet {
+            savedView.savedTableView.reloadData()
+        }
+    }
     let savedView = SavedView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,22 +21,36 @@ class SavedViewController: UIViewController {
         savedView.savedTableView.dataSource = self
         savedView.savedTableView.delegate = self
         savedView.savedTableView.register(UITableViewCell.self, forCellReuseIdentifier: "SavedCell")
+        self.savedVenues = SavedVenueModel.getLists()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.savedVenues = SavedVenueModel.getLists()
     }
 
 }
 extension SavedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        if savedVenues.count > 0 {
+            return savedVenues.count
+        } else {
+            return 2
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SavedCell", for: indexPath)
-        cell.textLabel?.text = indexPath.row.description
+        guard savedVenues.count > 0 else { return UITableViewCell() }
+     let venue = savedVenues[indexPath.row]
+        cell.textLabel?.text = venue.name
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-        print(indexPath.row.description)
+       let venue = savedVenues[indexPath.row]
+        vc.venueName = venue.id
+        vc.lat = venue.lat
+        vc.long = venue.long
         vc.modalPresentationStyle = .overCurrentContext
         navigationController?.pushViewController(vc, animated: true)
     }
