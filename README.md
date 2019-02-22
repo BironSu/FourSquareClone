@@ -37,6 +37,7 @@ Selecting a table view cell should segue to a detailed view with more informatio
 - The category under which the venue falls
 - The direction of the venue
 - A favorite button which allows the user to favorite the venue
+- A Tip button which allows the user to leave a tip
 
 ## List
 
