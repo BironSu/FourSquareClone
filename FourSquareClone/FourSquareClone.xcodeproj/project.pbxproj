@@ -17,6 +17,8 @@
 		09781846221F50FB00510D70 /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09781845221F50FB00510D70 /* APIKeys.swift */; };
 		09781848221F616300510D70 /* NewPhotoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09781847221F616300510D70 /* NewPhotoTest.swift */; };
 		0978184A221F6D3100510D70 /* SavedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09781849221F6D3100510D70 /* SavedList.swift */; };
+		0978184C221F76D600510D70 /* VenueFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978184B221F76D600510D70 /* VenueFolder.swift */; };
+		0978184E221F77D500510D70 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978184D221F77D500510D70 /* UIViewController+Alerts.swift */; };
 		0992F863221DE82A00322D74 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992F862221DE82A00322D74 /* Category.swift */; };
 		0992F866221DFF1800322D74 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0992F865221DFF1800322D74 /* LocationService.swift */; };
 		099800202216221500EBAEA2 /* CollectionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */; };
@@ -66,6 +68,8 @@
 		09781845221F50FB00510D70 /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
 		09781847221F616300510D70 /* NewPhotoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPhotoTest.swift; sourceTree = "<group>"; };
 		09781849221F6D3100510D70 /* SavedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedList.swift; sourceTree = "<group>"; };
+		0978184B221F76D600510D70 /* VenueFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueFolder.swift; sourceTree = "<group>"; };
+		0978184D221F77D500510D70 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		0992F862221DE82A00322D74 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0992F865221DFF1800322D74 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		0998001F2216221500EBAEA2 /* CollectionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListTableViewCell.swift; sourceTree = "<group>"; };
@@ -222,8 +226,8 @@
 				09781847221F616300510D70 /* NewPhotoTest.swift */,
 				014CA10C221C717A002A3C0E /* APIClient.swift */,
 				0904E3B02217594800B4066E /* NearByModel.swift */,
+				0978184B221F76D600510D70 /* VenueFolder.swift */,
 				0904E3B222175EF300B4066E /* VenueDetailModel.swift */,
-				0904E3B4221765C800B4066E /* SavedVenueModel.swift */,
 				014CA10E221C94FC002A3C0E /* CategoryModel.swift */,
 				93E4BB8B221DF7E900A67A4E /* QueryModel.swift */,
 				0992F862221DE82A00322D74 /* Category.swift */,
@@ -235,7 +239,9 @@
 		93D132DA220DF706003A7516 /* File Manager Services */ = {
 			isa = PBXGroup;
 			children = (
+				0904E3B4221765C800B4066E /* SavedVenueModel.swift */,
 				93D132E2220DF7E6003A7516 /* DataPersistenceManager.swift */,
+				0978184D221F77D500510D70 /* UIViewController+Alerts.swift */,
 			);
 			path = "File Manager Services";
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 				93D132E8220DF818003A7516 /* Date+Extensions.swift in Sources */,
 				09980026221623F600EBAEA2 /* SavedViewController.swift in Sources */,
 				93D132C3220DF33B003A7516 /* AppDelegate.swift in Sources */,
+				0978184C221F76D600510D70 /* VenueFolder.swift in Sources */,
 				09EF30F4221C97BB00DF1222 /* CollectionViewCell.swift in Sources */,
 				0998002A2216248700EBAEA2 /* SearchViewController.swift in Sources */,
 				93D132F1220E2029003A7516 /* SearchView.swift in Sources */,
@@ -347,6 +354,7 @@
 				0904E3B322175EF300B4066E /* VenueDetailModel.swift in Sources */,
 				099800202216221500EBAEA2 /* CollectionListTableViewCell.swift in Sources */,
 				0978184A221F6D3100510D70 /* SavedList.swift in Sources */,
+				0978184E221F77D500510D70 /* UIViewController+Alerts.swift in Sources */,
 				099800222216225600EBAEA2 /* CollectionListController.swift in Sources */,
 				0904E3B72217723A00B4066E /* MapViewController.swift in Sources */,
 				0904E3B5221765C800B4066E /* SavedVenueModel.swift in Sources */,

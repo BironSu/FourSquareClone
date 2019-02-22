@@ -38,7 +38,9 @@ class DetailViewController: UIViewController {
             self.detailVC.titleLabel.text = self.venueDetail.name
             self.detailVC.addressLabel.text = self.venueDetail.location.address ?? "No Address"
             let photos = self.venueDetail.photos.groups
+            guard photos.count > 0 else { return }
             let groups = photos[photos.count - 1].items
+            guard groups.count > 0 else { return }
             let id = groups[groups.count - 1].id
             APIClient.getImage(id: id, completionHandler: { (image, error) in
                 if let error = error {
