@@ -11,7 +11,7 @@ Using the FourSquare API to load list of categories of venues in a collection vi
 - Selecting on the venue's direction segues to the venue's map view annotations.
 - Clicking on the map view annotation gives you a google MKLocation direction
 
-![](File-from-iOS.gif), ![](File-from-iOS(1).gif),![](File-from-iOS(2).gif),![](File-from-iOS(3).gif),![](File-from-iOS(4).gif)
+
 
 # Detailed Outline
 
