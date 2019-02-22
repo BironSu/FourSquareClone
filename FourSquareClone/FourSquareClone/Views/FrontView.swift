@@ -31,13 +31,13 @@ class FrontView: UIView {
         searchButton.setTitle("Search", for: .normal)
         searchButton.layer.cornerRadius = 5
         
-        
         searchButton.backgroundColor = UIColor.init(r: 244, g: 66, b: 149)
         return searchButton
     }()
     
     lazy var bfButton: UIButton = {
         let button = UIButton()
+        button.setTitle("Breakfast", for: .normal)
         button.setImage(UIImage(named: "breakfast"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         var color = UIColor()
@@ -49,6 +49,7 @@ class FrontView: UIView {
     
     lazy var lunchButton: UIButton = {
         let button = UIButton()
+        button.setTitle("Lunch", for: .normal)
         button.setImage(UIImage(named: "lunch"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         var color = UIColor()
@@ -60,6 +61,7 @@ class FrontView: UIView {
     
     lazy var dinerButton: UIButton = {
         let button = UIButton()
+        button.setTitle("Diner", for: .normal)
         button.setImage(UIImage(named: "diner"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         var color = UIColor()
@@ -71,6 +73,7 @@ class FrontView: UIView {
     
     lazy var coffeeButton: UIButton = {
         let button = UIButton()
+        button.setTitle("Coffee", for: .normal)
         button.setImage(UIImage(named: "coffee"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         var color = UIColor()
@@ -82,6 +85,7 @@ class FrontView: UIView {
     
     lazy var nlButton: UIButton = {
         let button = UIButton()
+        button.setTitle("Night Life", for: .normal)
         button.setImage(UIImage(named: "nightLife"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         var color = UIColor()
@@ -93,6 +97,7 @@ class FrontView: UIView {
     
     lazy var toDoButton: UIButton = {
         let button = UIButton()
+        button.setTitle("Events", for: .normal)
         button.setImage(UIImage(named: "event"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         var color = UIColor()
@@ -105,7 +110,7 @@ class FrontView: UIView {
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
-    }
+   }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()

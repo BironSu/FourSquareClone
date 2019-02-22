@@ -9,14 +9,33 @@
 import UIKit
 
 class FrontViewController: UIViewController {
-
     let frontView = FrontView()
-    let detailView = DetailView()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(frontView)
-//        view.addSubview(detailView)
+        buttonSetup()
     }
-    
+    private func buttonSetup() {
+        frontView.mainSearchButton.addTarget(self, action: #selector(searchFunction(_:)), for: .touchUpInside)
+        frontView.coffeeButton.addTarget(self, action: #selector(searchFunction(_:)), for: .touchUpInside)
+        frontView.dinerButton.addTarget(self, action: #selector(searchFunction(_:)), for: .touchUpInside)
+        frontView.lunchButton.addTarget(self, action: #selector(searchFunction(_:)), for: .touchUpInside)
+        frontView.nlButton.addTarget(self, action: #selector(searchFunction(_:)), for: .touchUpInside)
+        frontView.bfButton.addTarget(self, action: #selector(searchFunction(_:)), for: .touchUpInside)
+        frontView.toDoButton.addTarget(self, action: #selector(searchFunction(_:)), for: .touchUpInside)
 
+    }
+    @objc private func searchFunction(_ sender: UIButton) {
+         let searchVC = SearchViewController()
+        switch sender {
+        case frontView.mainSearchButton:
+            searchVC.buttonSearch = true
+            searchVC.searchKey = "coffee"
+            navigationController?.pushViewController(searchVC, animated: true)
+        default:
+          searchVC.buttonSearch = false
+          searchVC.searchKey = sender.title(for: .normal)!
+            navigationController?.pushViewController(searchVC, animated: true)
+        }
+    }
 }

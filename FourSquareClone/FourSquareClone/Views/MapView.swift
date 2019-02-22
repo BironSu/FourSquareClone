@@ -7,15 +7,34 @@
 //
 
 import UIKit
+import MapKit
 
 class MapView: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    lazy var mapView: MKMapView = {
+        let map = MKMapView()
+        return map
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: UIScreen.main.bounds)
+        commonInit()
     }
-    */
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    private func  commonInit() {
+        setupMapContrains()
+    }
+    
+    private func setupMapContrains() {
+        addSubview(mapView)
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        mapView.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 1).isActive = true
+        mapView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
+        mapView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
+    }
 }

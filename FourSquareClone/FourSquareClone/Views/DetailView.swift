@@ -10,16 +10,27 @@ import UIKit
 import MapKit
 
 class DetailView: UIView {
-    lazy var detailImage: UIImageView = {
+    lazy var bgImage: UIImageView = {
         let detailI = UIImageView()
-        detailI.backgroundColor = .lightGray
+        detailI.image = UIImage(named: "foursquare")
         return detailI
     }()
+    
+    
+    
+    lazy var detailImage: UIImageView = {
+        let detailI = UIImageView()
+        detailI.image = UIImage(named: "foursquarePH")
+        detailI.contentMode = .scaleAspectFit
+        return detailI
+    }()
+    
     lazy var titleLabel: UILabel = {
         let titleL = UILabel()
         titleL.text = "This is titleLabel Test"
         titleL.textAlignment = .center
         titleL.backgroundColor = UIColor.white.withAlphaComponent(0.5)
+        titleL.font = UIFont.boldSystemFont(ofSize: 20)
         titleL.layer.cornerRadius = 15.0
         titleL.layer.masksToBounds = true
         return titleL
@@ -27,56 +38,62 @@ class DetailView: UIView {
     
     lazy var addressLabel: UILabel = {
         let addressL = UILabel()
-        addressL.backgroundColor = .lightGray
+        addressL.backgroundColor = .clear
+        addressL.textColor = .white
         addressL.numberOfLines = 0
         addressL.text = "This is the Address Label\nTest"
         return addressL
     }()
     lazy var hoursLabel: UILabel = {
         let hoursL = UILabel()
-        hoursL.backgroundColor = .lightGray
+        hoursL.backgroundColor = .clear
+        hoursL.textColor = .white
         hoursL.numberOfLines = 0
-        hoursL.text = "This is the Hours Label\nline2\nline3\nline4\nline5\nline6\nline7"
+        hoursL.text = "This is the Hours Label:\nline2\nline3\nline4\nline5\nline6\nline7"
         
         return hoursL
     }()
     lazy var categoryLabel: UILabel = {
         let categoryL = UILabel()
-        categoryL.backgroundColor = .lightGray
+        categoryL.backgroundColor = .clear
+        categoryL.textColor = .white
+        categoryL.font = UIFont.boldSystemFont(ofSize: 18)
+        categoryL.numberOfLines = 0
         categoryL.text = "This is the Category Label"
         return categoryL
     }()
     lazy var directionButton: UIButton = {
         let directionB = UIButton()
-        directionB.backgroundColor = .lightGray
+        directionB.backgroundColor = UIColor.init(r: 244, g: 66, b: 149)
         directionB.setTitle("Directions", for: .normal)
+        directionB.titleLabel?.textColor = .white
+        directionB.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         directionB.layer.cornerRadius = 10.0
-        directionB.layer.borderWidth = 1.0
         return directionB
     }()
     lazy var favoriteButton: UIButton = {
         let favoriteB = UIButton()
-        favoriteB.backgroundColor = .lightGray
+        favoriteB.backgroundColor = UIColor.init(r: 244, g: 66, b: 149)
         favoriteB.setTitle("Favorite", for: .normal)
+        favoriteB.titleLabel?.textColor = .white
+       favoriteB.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         favoriteB.layer.cornerRadius = 10.0
-        favoriteB.layer.borderWidth = 1.0
         return favoriteB
     }()
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
-        backgroundColor = UIColor.lightText
         commonInit()
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
-        fatalError("init(coder:) failed to implement")
     }
     private func commonInit(){
+        setupbgImage()
         setupDetailImage()
         setupTitleLabel()
         setupAddressLabel()
-        setupHoursLabel()
+        //setupHoursLabel()
         setupCategoryLabel()
         setupDirectionButton()
         setupFavoriteButton()
@@ -85,13 +102,23 @@ class DetailView: UIView {
 }
 
 extension DetailView {
+    private func setupbgImage() {
+        addSubview(bgImage)
+        bgImage.translatesAutoresizingMaskIntoConstraints = false
+        bgImage.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        bgImage.heightAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    }
+    
+    
     private func setupDetailImage() {
         addSubview(detailImage)
         detailImage.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             detailImage.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 0),
-            detailImage.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: 0),
-            detailImage.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            detailImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
+            detailImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
             detailImage.heightAnchor.constraint(equalToConstant: 300)
             ])
     }
@@ -132,8 +159,8 @@ extension DetailView {
         NSLayoutConstraint.activate([
             categoryLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             categoryLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            categoryLabel.heightAnchor.constraint(equalToConstant: 40),
-            categoryLabel.topAnchor.constraint(equalTo: hoursLabel.bottomAnchor, constant: 20)
+            categoryLabel.heightAnchor.constraint(equalToConstant: 80),
+            categoryLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 20)
             ])
     }
     private func setupDirectionButton() {

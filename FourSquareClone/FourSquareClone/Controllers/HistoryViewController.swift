@@ -12,34 +12,40 @@ class HistoryViewController: UIViewController {
 
     let historyView = HistoryView()
     
+    var savedList = [SavedList]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.historyView.historyTableView.reloadData()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
         self.view.addSubview(historyView)
-        historyView.delegate = self
         historyView.historyTableView.dataSource = self
+        historyView.historyTableView.delegate = self
         self.title = "History"
+        savedList = SavedVenueModel.getLists()
     }
     
 }
 
-extension HistoryViewController: UITableViewDataSource {
+extension HistoryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return savedList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") else {return UITableViewCell()}
+        cell.textLabel?.text = savedList[indexPath.row].name
         return cell
     }
-    
-    
-}
-
-extension HistoryViewController: HistoryViewDelegate {
-    func seguePressed() {
-        print("idk")
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        vc.venueName = savedList[indexPath.row].id
+        navigationController?.pushViewController(vc, animated: true)
     }
-    
     
 }
