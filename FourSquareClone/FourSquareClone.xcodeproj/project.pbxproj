@@ -217,11 +217,7 @@
 		93D132D9220DF6DC003A7516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
 				9371A85D221F596D0049439E /* APIKeys.swift */,
-=======
-				09781845221F50FB00510D70 /* APIKeys.swift */,
->>>>>>> b7727a36450b0c4a9733d45d978f9d32cc41a054
 				0904E3AE221756F500B4066E /* Photo.swift */,
 				09781847221F616300510D70 /* NewPhotoTest.swift */,
 				014CA10C221C717A002A3C0E /* APIClient.swift */,
@@ -363,11 +359,8 @@
 				93D132E3220DF7E6003A7516 /* DataPersistenceManager.swift in Sources */,
 				014CA10F221C94FC002A3C0E /* CategoryModel.swift in Sources */,
 				93D132FD220E2157003A7516 /* SavedView.swift in Sources */,
-<<<<<<< HEAD
 				9371A85E221F596D0049439E /* APIKeys.swift in Sources */,
-=======
-				09781846221F50FB00510D70 /* APIKeys.swift in Sources */,
->>>>>>> b7727a36450b0c4a9733d45d978f9d32cc41a054
+
 				93D132FB220E2145003A7516 /* CreateView.swift in Sources */,
 				0992F863221DE82A00322D74 /* Category.swift in Sources */,
 				93D132DD220DF7BF003A7516 /* AppError.swift in Sources */,
