@@ -19,7 +19,7 @@ class CollectionListView: UIView {
     lazy var collectionLabel: UILabel = {
         let label = UILabel()
         label.text = "Select a collection list to save"
-        label.textColor = .white
+        label.textColor = .black
         label.font = UIFont.init(name: "helvetica", size: 40)
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
@@ -29,7 +29,8 @@ class CollectionListView: UIView {
         let button = UIButton()
         button.setTitle("Create", for: .normal)
         button.titleLabel?.textColor = .white
-        button.backgroundColor = .red
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.backgroundColor = UIColor.init(r: 244, g: 66, b: 149)
         button.titleLabel?.adjustsFontSizeToFitWidth = true
         button.layer.cornerRadius = 10
         return button

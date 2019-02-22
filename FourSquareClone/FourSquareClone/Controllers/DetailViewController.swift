@@ -76,6 +76,8 @@ class DetailViewController: UIViewController {
         let vc = CollectionListController()
         vc.venue = venueDetail.name
         vc.id = venueName
+        vc.lat = venueDetail.location.lat
+        vc.long = venueDetail.location.lng
         vc.modalPresentationStyle = .overCurrentContext
         present(vc, animated: true, completion: nil)
     }

@@ -47,7 +47,10 @@ extension SavedViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-        print(indexPath.row.description)
+       let venue = savedVenues[indexPath.row]
+        vc.venueName = venue.id
+        vc.lat = venue.lat
+        vc.long = venue.long
         vc.modalPresentationStyle = .overCurrentContext
         navigationController?.pushViewController(vc, animated: true)
     }

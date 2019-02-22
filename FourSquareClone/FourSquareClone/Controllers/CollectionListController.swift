@@ -14,6 +14,8 @@ class CollectionListController: UIViewController {
     var folderName: String!
      var venue: String!
      var id: String!
+    var lat: Double!
+    var long: Double!
     var savedFolders = [VenueFolder]() {
         didSet {
             collectionListView.collectionListTableView.reloadData()
@@ -42,7 +44,7 @@ class CollectionListController: UIViewController {
             showAlert(title: "", message: "Select a collection to save", actionTitle: "OK")
             return
         }
-        let newVenue = SavedList.init(name: venue, id: id, folderName: folderName)
+        let newVenue = SavedList.init(name: venue, id: id, folderName: folderName, lat: lat, long: long)
         let newSavedVenue = SavedVenueModel.saveVenue(venue: newVenue)
         if let error = newSavedVenue.error {
             showAlert(title: "error", message: "could not save new venue: \(error)", actionTitle: "OK")
@@ -87,4 +89,12 @@ extension CollectionListController: DetailFavoriteSavedDelegate {
         self.venue = venueName
         self.id = venueID
     }
+}
+
+extension CollectionListController: CreatecollectionUpdate {
+    func updateCollection(collection: [VenueFolder]) {
+        self.savedFolders = collection
+    }
+    
+    
 }

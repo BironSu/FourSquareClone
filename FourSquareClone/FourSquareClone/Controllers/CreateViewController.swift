@@ -8,8 +8,12 @@
 
 import UIKit
 
-class CreateViewController: UIViewController {
+protocol CreatecollectionUpdate: AnyObject {
+    func updateCollection(collection: [VenueFolder])
+}
 
+class CreateViewController: UIViewController {
+    weak var delegate: CreatecollectionUpdate?
     let createView = CreateView()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +41,7 @@ class CreateViewController: UIViewController {
           showAlert(title: "Saving error", message: "error saving \(title)", actionTitle: "\(error)")
         } else {
             showAlert(title: "", message: "collection saved successfully", actionTitle: "OK")
+          delegate?.updateCollection(collection: SavedVenueModel.getVenueFolders())
         }
         dismiss(animated: true, completion: nil)
     }
