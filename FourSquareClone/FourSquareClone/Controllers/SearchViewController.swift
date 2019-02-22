@@ -124,16 +124,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
+        let collectionVC =  CollectionListController()
         if buttonSearch {
             let venue = searchQueryData[indexPath.row]
-            let venueHistory = SavedList.init(name: venue.name, id: venue.id)
+            let venueHistory = SavedList.init(name: venue.name, id: venue.id, folderName: nil, lat: venue.location.lat, long: venue.location.lng)
             SavedVenueModel.addList(list: venueHistory)
             vc.venueName = venue.id
             vc.lat = venue.location.lat
             vc.long = venue.location.lng
         } else {
             let venue = tihs[indexPath.row]
-            let venueHistory = SavedList.init(name: venue.venue.name, id: venue.venue.id)
+            let venueHistory = SavedList.init(name: venue.venue.name, id: venue.venue.id, folderName: nil, lat: venue.venue.location.lat, long: venue.venue.location.lng)
             SavedVenueModel.addList(list: venueHistory)
             vc.venueName = venue.venue.id
             vc.lat = venue.venue.location.lat
