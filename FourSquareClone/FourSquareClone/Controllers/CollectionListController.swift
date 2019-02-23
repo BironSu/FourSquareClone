@@ -21,11 +21,6 @@ class CollectionListController: UIViewController {
             collectionListView.collectionListTableView.reloadData()
         }
     }
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(collectionListView)
@@ -39,7 +34,6 @@ class CollectionListController: UIViewController {
     
     
     @objc private func createListSave() {
-       
         guard !folderName.isEmpty else {
             showAlert(title: "", message: "Select a collection to save", actionTitle: "OK")
             return

@@ -124,7 +124,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = DetailViewController()
-        let collectionVC =  CollectionListController()
+//        let collectionVC =  CollectionListController()
         if buttonSearch {
             let venue = searchQueryData[indexPath.row]
             let venueHistory = SavedList.init(name: venue.name, id: venue.id, folderName: nil, lat: venue.location.lat, long: venue.location.lng)
